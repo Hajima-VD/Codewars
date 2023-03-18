@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(222, 217, 210);
+    font-size: 22px;
+}
+
+.container {
+    width: 1200px;
+    margin: 30px auto;
+}
+.mycodewars {
+  display: flex;
+  justify-content: center;
+}
+.discription{
+    background-color:  rgb(236, 216, 189);
+    padding: 30px;
+    margin: 30px;
+   border: 2px solid  rgb(218, 151, 63);
+}

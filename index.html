@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./themes/prism.css" rel="stylesheet" />
+    <link href="./main.css" rel="stylesheet" />
+    <title>Codewars</title>
+</head>
+
+<body>
+        <div class="container">
+            <a class="mycodewars" href="https://www.codewars.com/users/Hajima-VD">
+                <img  src="https://www.codewars.com/users/Hajima-VD/badges/large" alt="img">
+            </a>
+             <div class="discription">
+              
+                 <pre class="margin_pre">
+                     <code class="language-css">
+                       
+                     </code>
+                 </pre>
+             </div>
+             <div class="discription">
+                Build a function that returns an array of integers from n to 1 where n>0.
+Example : n=5 --> [5,4,3,2,1]
+                 <pre class="margin_pre">
+                     <code class="language-js">
+                        const reverseSeq = n => {
+                            // объявляем пустой массив
+                           let myArray = [];
+                           
+                           // заполняем массив значениями от 0 до 4
+                           for (let i = 1; i <= n; i++) {
+                             myArray.push(i);
+                           }
+                           return myArray.reverse();
+                             };
+                             console.log(reverseSeq(4));
+                     </code>
+                 </pre>
+             </div>
+        </div>
+    <script src="./prism.js"></script>
+    <script src="./js.js"></script>
+</body>
+</html>
