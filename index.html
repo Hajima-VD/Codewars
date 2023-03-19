@@ -11,30 +11,30 @@
   </head>
 
   <body>
-    <div class="static">
-        <div class="flex_sb header">
-          <div class="flex_left">
-            <div>
-              <a href="./index.html" class="btn">Codewars</a>
+    <div class="container">
+      <div class="static">
+          <div class="flex_sb header">
+            <div class="flex_left">
+              <div>
+                <a href="./index.html" class="btn2">Codewars</a>
+              </div>
+              <div>
+                <a href="./metods.html" class="btn">Metods</a>
+              </div>
+              <div>
+                <a href="./helps.html" class="btn">Helps</a>
+              </div>
             </div>
-            <div>
-              <a href="./metods.html" class="btn">Metods</a>
+            <div class="flex_right">
+              <a class="mycodewars" href="https://www.codewars.com/users/Hajima-VD">
+                <img
+                  src="https://www.codewars.com/users/Hajima-VD/badges/large"
+                  alt="img"
+                />
+              </a>
             </div>
-            <div>
-              <a href="./helps.html" class="btn">Helps</a>
-            </div>
-          </div>
-          <div class="flex_right">
-            <a class="mycodewars" href="https://www.codewars.com/users/Hajima-VD">
-              <img
-                src="https://www.codewars.com/users/Hajima-VD/badges/large"
-                alt="img"
-              />
-            </a>
           </div>
         </div>
-      </div>
-    <div class="container">
         <div class="null"></div>
 
       <!-- <div class="discription">
@@ -53,10 +53,10 @@
         "are", "my", "favorite"]
         <pre class="margin_pre">
                      <code class="language-js">
-        function stringToArray(string){
-            return string.split(' ');
-        }
-        console.log(stringToArray('heloo my world !!!'))
+   function stringToArray(string){
+       return string.split(' ');
+   }
+   console.log(stringToArray('heloo my world !!!'))
                      </code>
                     </pre>
       </div>
@@ -80,12 +80,12 @@
         => "8/22"
         <pre class="margin_pre">
                      <code class="language-js">
-             function printer_error(s) {
-             const errorCount   s.split('').filter(char => char > 'm').length;
-             const totalCount = s.length;
-             return `${errorCount}/${totalCount}`;
-             }
-             console.log(printer_error("sjfjakfbjhasbfjhabsf"));
+   function printer_error(s) {
+   const errorCount   s.split('').filter(char => char > 'm').length;
+   const totalCount = s.length;
+   return `${errorCount}/${totalCount}`;
+    }
+    console.log(printer_error("sjfjakfbjhasbfjhabsf"));
                      </code>
                     </pre>
       </div>
@@ -95,17 +95,17 @@
         n>0. Example : n=5 --> [5,4,3,2,1]
         <pre class="margin_pre">
                      <code class="language-js">
-                        const reverseSeq = n => {
-                            // объявляем пустой массив
-                           let myArray = [];
-                           
-                           // заполняем массив значениями от 0 до 4
-                           for (let i = 1; i <= n; i++) {
-                             myArray.push(i);
-                           }
-                           return myArray.reverse();
-                             };
-                             console.log(reverseSeq(4));
+     const reverseSeq = n => {
+       // объявляем пустой массив
+        let myArray = [];
+                 
+       // заполняем массив значениями от 0 до 4
+      for (let i = 1; i <= n; i++) {
+             myArray.push(i);
+          }
+          return myArray.reverse();
+         };
+      console.log(reverseSeq(4));
                      </code>
                  </pre>
       </div>
@@ -116,10 +116,10 @@
         milliseconds.
         <pre class="margin_pre">
                      <code class="language-js">
-                         function past(h, m, s){
-                             return result= (s+(m*60)+(h*60*60))*1000;
-                            }
-                            console.log(past(1,33,5));
+     function past(h, m, s){
+         return result= (s+(m*60)+(h*60*60))*1000;
+        }
+        console.log(past(1,33,5));
                         </code>
                     </pre>
       </div>
