@@ -121,7 +121,7 @@
         <pre class="margin_pre">
                      <code class="language-js ">
       Сортировка строчных эементов масива по количеству символов в строке  
-                             
+
       arr.sort(function(a, b){   
         return b.length - a.length;
          }) 
@@ -132,7 +132,13 @@
       <div class="discription">
         <pre class="margin_pre">
                      <code class="language-js ">
- 
+     Для удаления пробелов между словами в JavaScript 
+     можно использовать следующий код:
+     var str = "Пример строки с пробелами между словами";
+     str = str.replace(/\s+/g,'');
+     console.log(str); // "Примерстрокиспробеламимеждусловами"
+     Этот код заменит все пробелы между словами в строке на
+     пустую строку и вернет измененную строку без пробелов в консоль.
                      </code>
                     </pre>
       </div>
