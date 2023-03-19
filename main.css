@@ -1,19 +1,89 @@
-body{
+body {
     background-color: rgb(222, 217, 210);
     font-size: 22px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.flex_left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 50px;
+}
+
+.flex_right {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.flex_sb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container {
     width: 1200px;
-    margin: 30px auto;
+    margin: 0 auto;
 }
-.mycodewars {
-  display: flex;
-  justify-content: center;
+
+.header {
+    padding: 0 50px;
+    background-color: rgb(237, 202, 158);
+    width: 100vw;
+    height: 60px;
+    border: 2px solid rgb(116, 80, 32);
 }
-.discription{
-    background-color:  rgb(236, 216, 189);
+.discription {
+    background-color: rgb(236, 216, 189);
     padding: 30px;
-    margin: 30px;
-   border: 2px solid  rgb(218, 151, 63);
+    margin: 0 30px 30px;
+    border: 2px solid rgb(218, 151, 63);
+    text-align: justify;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 130px;
+    background-color: rgb(227, 160, 85);
+    border: 2px solid rgb(116, 80, 32);
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 160px;
+    background-color: rgb(223, 152, 72);
+    border: 2px solid rgb(116, 80, 32);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 160px;
+    background-color: rgb(227, 160, 85);
+    border: 2px solid rgb(116, 80, 32);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.static {
+    position: fixed;
+}
+.null{
+    width: 100vw;
+    height: 100px;
+
 }

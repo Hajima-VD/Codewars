@@ -1,31 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./themes/prism.css" rel="stylesheet" />
+    <link href="./reset.css" rel="stylesheet" />
     <link href="./main.css" rel="stylesheet" />
     <title>Codewars</title>
-</head>
+  </head>
 
-<body>
-        <div class="container">
+  <body>
+    <div class="static">
+        <div class="flex_sb header">
+          <div class="flex_left">
+            <div>
+              <a href="./index.html" class="btn2">Codewars</a>
+            </div>
+            <div>
+              <a href="./metods.html" class="btn">Metods</a>
+            </div>
+            <div>
+              <a href="./helps.html" class="btn">Helps</a>
+            </div>
+          </div>
+          <div class="flex_right">
             <a class="mycodewars" href="https://www.codewars.com/users/Hajima-VD">
-                <img  src="https://www.codewars.com/users/Hajima-VD/badges/large" alt="img">
+              <img
+                src="https://www.codewars.com/users/Hajima-VD/badges/large"
+                alt="img"
+              />
             </a>
-             <!-- <div class="discription">
-              
+          </div>
+        </div>
+      </div>
+    <div class="container">
+        <div class="null"></div>
+
+      <!-- <div class="discription">
+
                  <pre class="margin_pre">
                      <code class="language-js">
-                       
+          
                      </code>
-                 </pre>
-             </div> -->
-             <div class="discription">
-                Build a function that returns an array of integers from n to 1 where n>0.
-Example : n=5 --> [5,4,3,2,1]
-                 <pre class="margin_pre">
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Write a function to split a string and convert it into an array of
+        words. Examples (Input ==> Output): "Robin Singh" ==> ["Robin", "Singh"]
+        "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they",
+        "are", "my", "favorite"]
+        <pre class="margin_pre">
+                     <code class="language-js">
+        function stringToArray(string){
+            return string.split(' ');
+        }
+        console.log(stringToArray('heloo my world !!!'))
+                     </code>
+                    </pre>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        In a factory a printer prints labels for boxes. For one kind of boxes
+        the printer has to use colors which, for the sake of simplicity, are
+        named with letters from a to m. The colors used by the printer are
+        recorded in a control string. For example a "good" control string would
+        be aaabbbbhaijjjm meaning that the printer used three times color a,
+        four times color b, one time color h then one time color a... Sometimes
+        there are problems: lack of colors, technical malfunction and a "bad"
+        control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not
+        from a to m. You have to write a function printer_error which given a
+        string will return the error rate of the printer as a string
+        representing a rational whose numerator is the number of errors and the
+        denominator the length of the control string. Don't reduce this fraction
+        to a simpler expression. The string has a length greater or equal to one
+        and contains only letters from ato z. Examples: s="aaabbbbhaijjjm"
+        printer_error(s) => "0/14" s="aaaxbbbbyyhwawiwjjjwwm" printer_error(s)
+        => "8/22"
+        <pre class="margin_pre">
+                     <code class="language-js">
+             function printer_error(s) {
+             const errorCount   s.split('').filter(char => char > 'm').length;
+             const totalCount = s.length;
+             return `${errorCount}/${totalCount}`;
+             }
+             console.log(printer_error("sjfjakfbjhasbfjhabsf"));
+                     </code>
+                    </pre>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Build a function that returns an array of integers from n to 1 where
+        n>0. Example : n=5 --> [5,4,3,2,1]
+        <pre class="margin_pre">
                      <code class="language-js">
                         const reverseSeq = n => {
                             // объявляем пустой массив
@@ -40,22 +108,24 @@ Example : n=5 --> [5,4,3,2,1]
                              console.log(reverseSeq(4));
                      </code>
                  </pre>
-             </div>
-                  <div class="discription">
-                    Clock shows h hours, m minutes and s seconds after midnight.
-
-                    Your task is to write a function which returns the time since midnight in milliseconds.
-                 <pre class="margin_pre">
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Clock shows h hours, m minutes and s seconds after midnight. Your task
+        is to write a function which returns the time since midnight in
+        milliseconds.
+        <pre class="margin_pre">
                      <code class="language-js">
-                           function past(h, m, s){
-                            return result= (s+(m*60)+(h*60*60))*1000;
-                           }
-                           console.log(past(1,33,5));
-                     </code>
-                 </pre>
-             </div>
-        </div>
+                         function past(h, m, s){
+                             return result= (s+(m*60)+(h*60*60))*1000;
+                            }
+                            console.log(past(1,33,5));
+                        </code>
+                    </pre>
+      </div>
+      <!-- =================================================================================== -->
+    </div>
     <script src="./prism.js"></script>
     <script src="./js.js"></script>
-</body>
+  </body>
 </html>
