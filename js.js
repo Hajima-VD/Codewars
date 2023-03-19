@@ -56,3 +56,14 @@ function stringToArray(string) {
   return string.split(' ');
 }
 console.log(stringToArray('heloo my world !!!'))
+
+
+Вот некоторый код на JavaScript, который сравнивает элементы двух массивов:
+const array1 = ['apple', 'banana', 'melon'];
+const array2 = ['banana', 'kiwi', 'watermelon'];
+
+const commonElements = array1.filter(value => array2.includes(value));
+
+console.log(commonElements); // Вывод: ['banana']
+
+В этом примере filter() используется для прохода каждого элемента в array1 и проверки, есть ли такой же элемент в array2 с помощью includes(). Если элементы есть и в первом, и во втором массиве, то они добавляются в commonElements.
