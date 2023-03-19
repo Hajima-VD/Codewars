@@ -46,6 +46,48 @@
                     </pre>
                 </div> -->
       <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Complete the solution so that the function will break up camel casing, using a space between words.
+
+        Example
+        "camelCasing"  =>  "camel Casing"
+        "identifier"   =>  "identifier"
+        ""             =>  ""
+                 <pre class="margin_pre">
+                     <code class="language-js">
+      function breakCamelCase(str) {
+        return str.replace(/[A-Z]/g, ' $&');
+      }
+      Этот код использует метод replace() для поиска всех заглавных букв в 
+      строке str и вставки перед ними пробела с помощью регулярного 
+      выражения /[A-Z]/g. Здесь g означает глобальный поиск, который 
+      находит все соответствия, а не только первое. $& означает найденный
+      символ, поэтому перед ним ставится пробел. Таким образом, каждый раз,
+      когда функция обнаруживает заглавную букву, она вставляет перед ней
+      пробел, что и разбивает Camel Case.
+
+      function solution(string) {
+        string = string.split('').map(function (el) {
+          if (el === el.toUpperCase()) {
+            el = ' ' + el
+          }
+          return el
+        })
+        return string.join('')
+      }
+                     </code>
+                    </pre>
+                </div>
+      <!-- =================================================================================== -->
       <div class="discription">
         Write a function to split a string and convert it into an array of
         words. Examples (Input ==> Output): "Robin Singh" ==> ["Robin", "Singh"]

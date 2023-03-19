@@ -7,9 +7,10 @@
     --bg-bege-4: rgb(227, 160, 85);
     --bg-bege-border-1: rgb(218, 151, 63);
     --bg-bege-border-2: rgb(116, 80, 32);
+    --text-dark-bege: rgb(131, 71, 3);
     --text-grey: #999999;
     --bg-color: #141619;
-    --bg-color-red: #ff0000;
+    --bg-color-red: #d90000;
     --color-darck: #000000;
     --color-hover: rgba(255, 255, 255, 0.3);
 }
@@ -62,6 +63,13 @@ body {
     text-align: justify;
 }
 
+.metod_discr{
+    color: var(--text-dark-bege);
+    font-size: 2vw;
+    font-weight: 600;
+    font-style: italic;
+}
+
 .btn {
     display: flex;
     justify-content: center;
@@ -83,6 +91,10 @@ body {
     border: 2px solid var(--bg-bege-border-2);
     text-decoration: none;
     border-radius: 5px;
+}
+.btn2:hover {
+    background-color: var(--bg-bege-3);
+    border: 2px solid var(--bg-bege-border-2);
 }
 
 .btn:hover {

@@ -57,13 +57,31 @@ function stringToArray(string) {
 }
 console.log(stringToArray('heloo my world !!!'))
 
+// Complete the solution so that the function will break up camel casing, using a space between words. Example "camelCasing" => "camel Casing" "identifier" => "identifier" "" => ""
+                     
+      function breakCamelCase(str) {
+        return str.replace(/[A-Z]/g, ' $&');
+      }
+      console.log(breakCamelCase('sjdfjshfHHjhja'));
+      // Этот код использует метод replace() для поиска всех заглавных букв в 
+      // строке str и вставки перед ними пробела с помощью регулярного 
+      // выражения /[A-Z]/g. Здесь g означает глобальный поиск, который 
+      // находит все соответствия, а не только первое. $& означает найденный
+      // символ, поэтому перед ним ставится пробел. Таким образом, каждый раз,
+      // когда функция обнаруживает заглавную букву, она вставляет перед ней
+      // пробел, что и разбивает Camel Case.
 
-Вот некоторый код на JavaScript, который сравнивает элементы двух массивов:
-const array1 = ['apple', 'banana', 'melon'];
-const array2 = ['banana', 'kiwi', 'watermelon'];
 
-const commonElements = array1.filter(value => array2.includes(value));
+      const strarr=['qqq','wwww','a','bb','ccccc','ffffff','uuuuuuu',];
+      function call(strarr){
+        let arr=strarr;
+      arr.sort(
+        function(a, b){ 
+          return b.length - a.length;
+      }
+      );
+     return arrN = arr[0] +arr[1];
 
-console.log(commonElements); // Вывод: ['banana']
-
-В этом примере filter() используется для прохода каждого элемента в array1 и проверки, есть ли такой же элемент в array2 с помощью includes(). Если элементы есть и в первом, и во втором массиве, то они добавляются в commonElements.
+   
+      }
+      console.log(call(strarr));
