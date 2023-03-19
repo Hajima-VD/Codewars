@@ -49,7 +49,7 @@
       <!-- =================================================================================== -->
       <div class="discription ">
         <p class="metod_discr">
-         map()
+          Array.prototype.map()
         </p>
         <pre class="margin_pre">
                      <code class="language-js">
@@ -78,19 +78,25 @@ str.split([separator[, limit]])
       <!-- =================================================================================== -->
       <div class="discription">
         <p class="metod_discr">
-          filter()
+          Array.prototype.filter()
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
 Метод filter() создаёт новый массив со всеми элементами, прошедшими 
 проверку, задаваемую в передаваемой функции.
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
                      </code>
                     </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
         <p class="metod_discr">
-          includes()
+          Array.prototype.includes()
         </p>
         
         <pre class="margin_pre">
@@ -111,26 +117,51 @@ str.split([separator[, limit]])
  
  Этот метод возвращает значение true, если переданная подстрока найдена, 
  в противном случае возвращает значение false.
+
+ const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// Expected output: true
+
+console.log(pets.includes('at'));
+// Expected output: false
                      </code>
                     </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription ">
         <p class="metod_discr">
-          join()
+          Array.prototype.join()
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
 Метод join() объединяет все элементы массива (или массивоподобного объекта) в строку.
 Синтаксис
 arr.join([separator])
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// Expected output: "FireAirWater"
+
+console.log(elements.join('-'));
+// Expected output: "Fire-Air-Water"
+
                      </code>
                     </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription ">
         <p class="metod_discr">
-          sort()
+          Array.prototype.sort()
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
@@ -146,11 +177,33 @@ arr.join([separator])
       <!-- =================================================================================== -->
       <div class="discription">
         <p class="metod_discr">
-          
+          Array.prototype.slice()
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
+Метод slice() возвращает новый массив, содержащий копию части исходного массива.
+Синтаксис
+arr.slice([begin[, end]])
 
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
                      </code>
                     </pre>
       </div>

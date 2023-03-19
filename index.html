@@ -46,14 +46,71 @@
                     </pre>
                 </div> -->
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
+      <div class="discription">
+        You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+        In the same way:
+        longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
+        n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (return Nothing in Elm, "nothing" in Erlang).
+        
+        Note
+        consecutive strings : follow one after another without an interruption
                  <pre class="margin_pre">
                      <code class="language-js">
-          
+   Examples:
+   strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2
+   
+   Concatenate the consecutive strings of strarr by 2, we get:
+   
+   treefoling   (length 10)  concatenation of strarr[0] and strarr[1]
+   folingtrashy ("      12)  concatenation of strarr[1] and strarr[2]
+   trashyblue   ("      10)  concatenation of strarr[2] and strarr[3]
+   blueabcdef   ("      10)  concatenation of strarr[3] and strarr[4]
+   abcdefuvwxyz ("      12)  concatenation of strarr[4] and strarr[5]
+   
+   Two strings are the longest: "folingtrashy" and "abcdefuvwxyz".
+   The first that came is "folingtrashy" so 
+   longest_consec(strarr, 2) should return "folingtrashy".
+
+   Решение на JavaScript:
+
+  function longestConsec(strarr, k) {
+    if (k > strarr.length || k <= 0) {
+        return "";
+    }
+    
+    let longestStr = "";
+  
+    for (let i = 0; i < strarr.length - k + 1; i++) {
+        const currentStr = strarr.slice(i, i + k).join("");
+        
+        if (currentStr.length > longestStr.length) {
+            longestStr = currentStr;
+        }
+    }
+  
+    return longestStr;
+    }
+
+   Эта функция принимает входные параметры `strarr` (массив строк)
+   и `k` (целочисленное значение), и возвращает первую самую 
+   длинную строку, состоящую из k последовательных строк из массива.
+   Сначала мы проверяем, если k равен 0 или больше, чем длина
+   массива строк `strarr`, то функция возвращает пустую строку. 
+   Далее мы создаем переменную `longestStr`, которая будет
+   хранить самую длинную строку. Затем мы используем цикл `for`,
+   чтобы перебрать каждую последовательность строк длины `k`
+   и сравниваем их длины с длиной самой длинной строки. Если 
+   текущая последовательность строк длиннее, чем самая длинная, 
+   то мы обновляем значение переменной `longestStr`. В конце функции,
+   мы возвращаем значение самой длинной строки.
+   Например, если 
+   `strarr` равен `["hello", "world", "this", "is", "a", "test"]` 
+   и `k` равно `3`, то функция вернет строку `"thisisatest"`. 
+   Это происходит потому, что самая длинная строка состоит из 
+   трех последовательных строк: `"this"`, `"is"`, и `"a"`.
                      </code>
                     </pre>
-                </div> -->
+                </div>
       <!-- =================================================================================== -->
       <div class="discription">
         Complete the solution so that the function will break up camel casing, using a space between words.
