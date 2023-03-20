@@ -39,7 +39,11 @@
       </div>
       <div class="null"></div>
       <!-- <div class="discription">
-              
+               <p class="metod_discr">
+          <code class="language-js">
+            
+          </code>
+        </p>
                  <pre class="margin_pre">
                      <code class="language-js">
               
@@ -47,9 +51,115 @@
                     </pre>
                 </div> -->
       <!-- =================================================================================== -->
-      <div class="discription ">
+      <!-- <div class="discription">
+               <p class="metod_discr">
+          <code class="language-js">
+
+          </code>
+        </p>
+                 <pre class="margin_pre">
+                     <code class="language-js">
+              
+                     </code>
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+               <p class="metod_discr">
+          <code class="language-js">
+
+          </code>
+        </p>
+                 <pre class="margin_pre">
+                     <code class="language-js">
+              
+                     </code>
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+               <p class="metod_discr">
+          <code class="language-js">
+
+          </code>
+        </p>
+                 <pre class="margin_pre">
+                     <code class="language-js">
+              
+                     </code>
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <div class="discription">
         <p class="metod_discr">
-          Array.prototype.map()
+          <code class="language-js"> Array.prototype.reduce() </code>
+        </p>
+        <pre class="margin_pre">
+                     <code class="language-js">
+  Метод reduce() применяет функцию reducer к каждому элементу массива 
+  (слева-направо), возвращая одно результирующее значение.                
+  Метод .reduce() может использоваться для сложения элементов массива:
+  const numbers = [1, 2, 3, 4, 5];
+  const sum = numbers.reduce((acc, cur) => acc + cur);
+  console.log(sum); // 15
+  
+  
+  Также можно использовать цикл for:
+  const numbers = [1, 2, 3, 4, 5];
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum); // 15
+                      
+                   
+                     </code>
+                    </pre>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        <p class="metod_discr">
+          <code class="language-js"> Array.prototype.every() </code>
+        </p>
+        <pre class="margin_pre">
+                     <code class="language-js">
+  Функция every() - это метод, доступный в JavaScript, 
+  который принимает массив и функцию в качестве аргументов. 
+  Он проверяет, являются ли все элементы массива истинными 
+  в соответствии с заданной функцией. Если все элементы 
+  массива удовлетворяют условиям функции, то функция 
+  возвращает true. Если хотя бы один элемент не проходит 
+  проверку, то возвращается значение false.
+  
+  Например, если мы хотим проверить каждый элемент массива, 
+  чтобы убедиться, что все числа являются положительными, 
+  мы можем использовать метод every() следующим образом:
+  
+  const числа = [4, 5, 2, 8, 10];
+  const все_положительные = числа.every(function(элемент) {
+    return элемент > 0;
+  });
+  console.log(все_положительные); // true
+
+  В данном примере наша функция-аргумент проверяет, что 
+  каждый элемент массива больше 0. Так как все элементы 
+  массива удовлетворяют этому условию, метод every() 
+  возвращает true.
+  
+  Более формально, every() принимает функцию, которая 
+  имеет до трех аргументов (element, index и array) в 
+  качестве параметров и возвращает логическое 
+  значение (true / false). Если функция возвращает 
+  false для одного из отдельных элементов, every() 
+  возвращает false. Если функция вернула true для
+   каждого элемента, every() возвращает true.
+                     </code>
+                    </pre>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        <p class="metod_discr">
+          <code class="language-js"> Array.prototype.map() </code>
         </p>
         <pre class="margin_pre">
                      <code class="language-js">
@@ -63,10 +173,8 @@
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
-        <p class="metod_discr">
-         split()
-       </p>
-        
+        <p class="metod_discr"><code class="language-js">split() </code></p>
+
         <pre class="margin_pre">
                      <code class="language-js ">
 Метод split() разбивает объект String на массив строк 
@@ -78,7 +186,7 @@ str.split([separator[, limit]])
       <!-- =================================================================================== -->
       <div class="discription">
         <p class="metod_discr">
-          Array.prototype.filter()
+          <code class="language-js"> Array.prototype.filter() </code>
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
@@ -96,9 +204,9 @@ console.log(result);
       <!-- =================================================================================== -->
       <div class="discription">
         <p class="metod_discr">
-          Array.prototype.includes()
+          <code class="language-js"> Array.prototype.includes() </code>
         </p>
-        
+
         <pre class="margin_pre">
                      <code class="language-js ">
  Метод includes() определяет, содержит ли массив определённый элемент, 
@@ -134,9 +242,9 @@ console.log(pets.includes('at'));
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription ">
+      <div class="discription">
         <p class="metod_discr">
-          Array.prototype.join()
+          <code class="language-js"> Array.prototype.join() </code>
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
@@ -159,9 +267,9 @@ console.log(elements.join('-'));
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription ">
+      <div class="discription">
         <p class="metod_discr">
-          Array.prototype.sort()
+          <code class="language-js"> Array.prototype.sort() </code>
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
@@ -177,7 +285,7 @@ console.log(elements.join('-'));
       <!-- =================================================================================== -->
       <div class="discription">
         <p class="metod_discr">
-          Array.prototype.slice()
+          <code class="language-js"> Array.prototype.slice() </code>
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
@@ -210,22 +318,60 @@ console.log(animals.slice());
       <!-- =================================================================================== -->
       <div class="discription">
         <p class="metod_discr">
-
+          <code class="language-js"> for() </code>
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
+ Оператор for создаёт цикл, состоящий из трех необязательных выражений,
+ заключенных в круглые скобки и разделенных точкой с запятой, за 
+ которыми следует инструкция (часто блок инструкций), которая должна 
+ выполняться в цикле.
+ Синтаксис
+ for ([инициализация]; [условие]; [финальное выражение])
+   [инструкция]
 
+let str = '';
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
                      </code>
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription ">
-        <p class="metod_discr">
-
-        </p>
+      <div class="discription">
+        <p class="metod_discr"><code class="language-js">new Set() </code></p>
         <pre class="margin_pre">
                      <code class="language-js ">
-
+   new Set()- это конструктор в JavaScript, который создает 
+   новый объект Set.Объект Set - это коллекция уникальных 
+   значений, которые могут быть любого типа: и чисел, 
+   и строк, и объектов.
+     
+   Каждое значение может быть добавлено в Set только один раз, 
+   что гарантирует отсутствие дубликатов. Также Set обеспечивает 
+   быстрый доступ к значениям и имеет ряд удобных методов для 
+   работы с ними.
+   
+   Для создания объекта Set используется конструктор `new Set()`, 
+   который не принимает аргументов. Можно передать ему 
+   итерируемый объект, например массив, для инициализации 
+   начальных значений:
+   
+   const mySet = new Set([1, 2, 3]);
+   console.log(mySet); // Set { 1, 2, 3 }
+     
+   Также можно добавлять и удалять значения из Set с помощью 
+   методов `add()` и `delete()`:
+   
+   mySet.add(4);
+   mySet.delete(2);
+   console.log(mySet); // Set { 1, 3, 4 }
+                      
+   В целом, Set позволяет эффективно решать множество типичных 
+   задач, связанных с уникальными значениями, поиском пересечений, объединения и т.д.
                      </code>
                     </pre>
       </div>

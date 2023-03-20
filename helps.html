@@ -45,10 +45,12 @@
                 </div> -->
       <!-- =================================================================================== -->
       <div class="discription">
+        <code class="language-js">
+          фильтрует массив, оставляя только символы, которые больше буквы m в алфавите. 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js">
  .filter(char => char > 'm') - 
- фильтрует массив, оставляя только символы, которые больше буквы m в алфавите. 
                      </code>
                     </pre>
       </div>
@@ -62,6 +64,12 @@
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
+        <code class="language-js">
+          В этом примере filter() используется для прохода каждого элемента в array1 
+          и проверки, есть ли такой же элемент в array2 с помощью includes(). Если 
+          элементы есть и в первом, и во втором массиве, то они 
+          добавляются в commonElements.
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
     Вот некоторый код на JavaScript, который сравнивает элементы двух массивов:
@@ -72,36 +80,40 @@
     
     console.log(commonElements); // Вывод: ['banana']
     
-    В этом примере filter() используется для прохода каждого элемента в array1 
-    и проверки, есть ли такой же элемент в array2 с помощью includes(). Если 
-    элементы есть и в первом, и во втором массиве, то они 
-    добавляются в commonElements.
                      </code>
                     </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
+        <code class="language-js">
+          Этот код использует метод replace() для поиска всех заглавных букв в 
+          строке str и вставки перед ними пробела с помощью регулярного 
+          выражения /[A-Z]/g. Здесь g означает глобальный поиск, который 
+          находит все соответствия, а не только первое. $& означает найденный
+          символ, поэтому перед ним ставится пробел. Таким образом, каждый раз,
+          когда функция обнаруживает заглавную букву, она вставляет перед ней
+          пробел, что и разбивает Camel Case.
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
       function breakCamelCase(str) {
         return str.replace(/[A-Z]/g, ' $&');
       }
-      Этот код использует метод replace() для поиска всех заглавных букв в 
-      строке str и вставки перед ними пробела с помощью регулярного 
-      выражения /[A-Z]/g. Здесь g означает глобальный поиск, который 
-      находит все соответствия, а не только первое. $& означает найденный
-      символ, поэтому перед ним ставится пробел. Таким образом, каждый раз,
-      когда функция обнаруживает заглавную букву, она вставляет перед ней
-      пробел, что и разбивает Camel Case.
                      </code>
                     </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
+        <code class="language-js">
+          Cортировка массива по возрастанию .
+          Для этого можно использовать метод sort():
+          В этом примере мы передаем функцию сравнения в метод sort(),
+          которая сравнивает два элемента массива a и b. Если результат
+          вызова этой функции отрицательный, то a будет расположен 
+          перед b. Если результат положительный, то b будет перед a.
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
-      Cортировка массива по возрастанию .
-      Для этого можно использовать метод sort():
 
       let myArray = [3, 1, 4, 2, 5];
       myArray.sort(function(a, b) {
@@ -109,18 +121,16 @@
       });
       
       console.log(myArray); // [1, 2, 3, 4, 5]
-      В этом примере мы передаем функцию сравнения в метод sort(),
-      которая сравнивает два элемента массива a и b. Если результат
-      вызова этой функции отрицательный, то a будет расположен 
-      перед b. Если результат положительный, то b будет перед a.
                      </code>
                     </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
+        <code class="language-js">
+          Сортировка строчных эементов масива по количеству символов в строке  
+           </code>
         <pre class="margin_pre">
                      <code class="language-js ">
-      Сортировка строчных эементов масива по количеству символов в строке  
 
       arr.sort(function(a, b){   
         return b.length - a.length;
@@ -130,10 +140,12 @@
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
+        <code class="language-js">
+          Для удаления пробелов между словами в JavaScript 
+          можно использовать следующий код:
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
-     Для удаления пробелов между словами в JavaScript 
-     можно использовать следующий код:
      var str = "Пример строки с пробелами между словами";
      str = str.replace(/\s+/g,'');
      console.log(str); // "Примерстрокиспробеламимеждусловами"
@@ -144,6 +156,25 @@
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
+        <code class="language-js">  
+
+          Этот кусок кода проверяет, является ли символ, который передан в переменной "char", буквой из английского алфавита в нижнем регистре. Для этого он применяет регулярное выражение /[a-z]/, которое ищет любой символ от 'a' до 'z'. Если символ соответствует этому шаблону, то он добавляется в множество "letters". Множество (set) представляет собой коллекцию уникальных значений, что значит, что если буква уже была добавлена в "letters", то повторно она туда не добавится.
+        </code>
+        <pre class="margin_pre">
+                     <code class="language-js ">
+       if (/[a-z]/.test(char)) {
+         letters.add(char);
+       }
+                     </code>
+                    </pre>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription ">
+        <code class="language-js">
+        </code>
+        <code class="language-js ">
+ 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
  
@@ -151,7 +182,12 @@
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription">
+      <div class="discription ">
+        <code class="language-js">
+        </code>
+        <code class="language-js ">
+ 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
  
@@ -159,7 +195,12 @@
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription">
+      <div class="discription ">
+        <code class="language-js">
+        </code>
+        <code class="language-js ">
+ 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
  
@@ -167,7 +208,12 @@
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription">
+      <div class="discription ">
+        <code class="language-js">
+        </code>
+        <code class="language-js ">
+ 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
  
@@ -175,7 +221,12 @@
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription">
+      <div class="discription ">
+        <code class="language-js">
+        </code>
+        <code class="language-js ">
+ 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
  
@@ -183,7 +234,12 @@
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription">
+      <div class="discription ">
+        <code class="language-js">
+        </code>
+        <code class="language-js ">
+ 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
  
@@ -191,7 +247,12 @@
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription">
+      <div class="discription ">
+        <code class="language-js">
+        </code>
+        <code class="language-js ">
+ 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
  
@@ -199,7 +260,12 @@
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription">
+      <div class="discription ">
+        <code class="language-js">
+        </code>
+        <code class="language-js ">
+ 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
  
@@ -207,7 +273,12 @@
                     </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription">
+      <div class="discription ">
+        <code class="language-js">
+        </code>
+        <code class="language-js ">
+ 
+        </code>
         <pre class="margin_pre">
                      <code class="language-js ">
  
@@ -215,6 +286,7 @@
                     </pre>
       </div>
       <!-- =================================================================================== -->
+  
     </div>
     <script src="./prism.js"></script>
     <script src="./js.js"></script>

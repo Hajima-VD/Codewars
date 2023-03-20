@@ -61,36 +61,36 @@ function stringToArray(string) {
 console.log(stringToArray('heloo my world !!!'))
 
 // Complete the solution so that the function will break up camel casing, using a space between words. Example "camelCasing" => "camel Casing" "identifier" => "identifier" "" => ""
-                     
-      function breakCamelCase(str) {
-        return str.replace(/[A-Z]/g, ' $&');
-      }
-      console.log(breakCamelCase('sjdfjshfHHjhja'));
-      // Этот код использует метод replace() для поиска всех заглавных букв в 
-      // строке str и вставки перед ними пробела с помощью регулярного 
-      // выражения /[A-Z]/g. Здесь g означает глобальный поиск, который 
-      // находит все соответствия, а не только первое. $& означает найденный
-      // символ, поэтому перед ним ставится пробел. Таким образом, каждый раз,
-      // когда функция обнаруживает заглавную букву, она вставляет перед ней
-      // пробел, что и разбивает Camel Case.
+
+function breakCamelCase(str) {
+  return str.replace(/[A-Z]/g, ' $&');
+}
+console.log(breakCamelCase('sjdfjshfHHjhja'));
+// Этот код использует метод replace() для поиска всех заглавных букв в 
+// строке str и вставки перед ними пробела с помощью регулярного 
+// выражения /[A-Z]/g. Здесь g означает глобальный поиск, который 
+// находит все соответствия, а не только первое. $& означает найденный
+// символ, поэтому перед ним ставится пробел. Таким образом, каждый раз,
+// когда функция обнаруживает заглавную букву, она вставляет перед ней
+// пробел, что и разбивает Camel Case.
 
 
 function longestConsec(strarr, k) {
-    if (k > strarr.length || k <= 0) {
-        return "";
+  if (k > strarr.length || k <= 0) {
+    return "";
+  }
+
+  let longestStr = "";
+
+  for (let i = 0; i < strarr.length - k + 1; i++) {
+    const currentStr = strarr.slice(i, i + k).join("");
+
+    if (currentStr.length > longestStr.length) {
+      longestStr = currentStr;
     }
-    
-    let longestStr = "";
-  
-    for (let i = 0; i < strarr.length - k + 1; i++) {
-        const currentStr = strarr.slice(i, i + k).join("");
-        
-        if (currentStr.length > longestStr.length) {
-            longestStr = currentStr;
-        }
-    }
-  
-    return longestStr;
+  }
+
+  return longestStr;
 }
 
 
@@ -100,7 +100,31 @@ function longestConsec(strarr, k) {
 
 // Например, если `strarr` равен `["hello", "world", "this", "is", "a", "test"]` и `k` равно `3`, то функция вернет строку `"thisisatest"`. Это происходит потому, что самая длинная строка состоит из трех последовательных строк: `"this"`, `"is"`, и `"a"`.
 
-function noSpace(x){
- return x = x.replace(/\s+/g,'');
+function noSpace(x) {
+  return x = x.replace(/\s+/g, '');
 }
 console.log("asd 6565 sdsd");
+
+
+function isPangram(string) {
+  return string.replace(/[A-Z]&&[a-z]/g, '$&' ? true : false);
+}
+console.log('hi sdfdsfdsf jnbjhsbfhj poqwei');
+
+        
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+// For example (Input -> Output):
+
+// 2 -> 3 (1 + 2)
+// 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+
+var summation = function (num) {
+  let myArray = [];
+  for (let i = 1; i <= num; i++) {
+    myArray.push(i);
+  }
+  return myArray.reduce((acc, cur) => acc + cur);
+};
+console.log(summation(6));

@@ -13,48 +13,33 @@
   <body>
     <div class="container">
       <div class="static">
-          <div class="flex_sb header">
-            <div class="flex_left">
-              <div>
-                <a href="./index.html" class="btn2">Codewars</a>
-              </div>
-              <div>
-                <a href="./metods.html" class="btn">Metods</a>
-              </div>
-              <div>
-                <a href="./helps.html" class="btn">Helps</a>
-              </div>
+        <div class="flex_sb header">
+          <div class="flex_left">
+            <div>
+              <a href="./index.html" class="btn2">Codewars</a>
             </div>
-            <div class="flex_right">
-              <a class="mycodewars" href="https://www.codewars.com/users/Hajima-VD">
-                <img
-                  src="https://www.codewars.com/users/Hajima-VD/badges/large"
-                  alt="img"
-                />
-              </a>
+            <div>
+              <a href="./metods.html" class="btn">Metods</a>
+            </div>
+            <div>
+              <a href="./helps.html" class="btn">Helps</a>
             </div>
           </div>
+          <div class="flex_right">
+            <a
+              class="mycodewars"
+              href="https://www.codewars.com/users/Hajima-VD"
+            >
+              <img
+                src="https://www.codewars.com/users/Hajima-VD/badges/large"
+                alt="img"
+              />
+            </a>
+          </div>
         </div>
-        <div class="null"></div>
+      </div>
+      <div class="null"></div>
 
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
-                     <code class="language-js">
-          
-                     </code>
-                    </pre>
-                </div> -->
-      <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
-                     <code class="language-js">
-          
-                     </code>
-                    </pre>
-                </div> -->
-      <!-- =================================================================================== -->
       <!-- <div class="discription">
 
                  <pre class="margin_pre">
@@ -65,25 +50,107 @@
                 </div> -->
       <!-- =================================================================================== -->
       <div class="discription">
-Write a function that removes the spaces from the string, then return the resultant string.
+        Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+        For example (Input -> Output):
+        2 -> 3 (1 + 2)
+        8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
                  <pre class="margin_pre">
+                     <code class="language-js">
+    var summation = function (num) {
+      let myArray = [];
+      for (let i = 1; i <= num; i++) {
+        myArray.push(i);
+      }
+      return myArray.reduce((acc, cur) => acc + cur);
+    };
+    console.log(summation(6));
+//=======================================================//
+
+    const summation = n => n * (n + 1) / 2;
+                     </code>
+                    </pre>
+                </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        A pangram is a sentence that contains every single letter of the
+        alphabet at least once. For example, the sentence "The quick brown fox
+        jumps over the lazy dog" is a pangram, because it uses the letters A-Z
+        at least once (case is irrelevant). Given a string, detect whether or
+        not it is a pangram. Return True if it is, False if not. Ignore numbers
+        and punctuation.
+        <pre class="margin_pre">
+                     <code class="language-js">
+   function isPangram(str) {
+  // Создаем Set, чтобы хранить уникальные буквы из строки
+  const letters = new Set();
+  // Итерируемся по каждому символу в строке
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i].toLowerCase();
+    // Если символ является буквой от a до z, добавляем его в Set
+    if (/[a-z]/.test(char)) {
+      letters.add(char);
+    }
+  }
+  // Если в Set'е есть все 26 букв, значит строка является панграммой
+  return letters.size === 26;
+}
+                      
+                      
+Функция `isPangram()` принимает один аргумент `str` - строку, 
+в которой нужно проверить, является ли она панграммой. 
+В начале функции мы создаем Set `letters`, в котором 
+будем хранить уникальные буквы из строки.
+Затем мы итерируемся по каждому символу в строке. 
+Если символ является буквой от a до z (игнорируем регистр), 
+то мы добавляем его в Set `letters`.
+В конце функции мы проверяем, есть ли в Set'е все 26 букв. 
+Если да, то возвращаем `true`. Если нет, то возвращаем `false`.
+Например:
+
+console.log(isPangram("The quick brown fox jumps over the lazy dog")); // true
+console.log(isPangram("Pack my box with five dozen liquor jugs")); // true
+console.log(isPangram("Hello, world!")); // false
+
+//------------------------------------------------------------//
+
+function isPangram(string){
+  return (string.match(/([a-z])(?!.*\1)/ig) || []).length === 26;
+}
+
+Эта функция определяет, является ли заданная строка "панграммой", 
+то есть содержит ли она все буквы алфавита 
+от A до Z (без учета регистра). Функция использует регулярное 
+выражение `([a-z])(?!.*\1)`, которое ищет повторяющиеся буквы 
+в строке и исключает их из поиска. Затем функция проверяет 
+количество найденных уникальных букв и сравнивает его со 
+значением 26 (количество букв в английском алфавите).
+Если функция находит все 26 букв в строке, то 
+возвращает `true`, иначе `false`.
+                     </code>
+                    </pre>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Write a function that removes the spaces from the string, then return
+        the resultant string.
+        <pre class="margin_pre">
                      <code class="language-js">
        function noSpace(x){
          return x.replace(/\s/g, '');
        }
                      </code>
                     </pre>
-                </div>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
-        You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
-        In the same way:
-        longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
-        n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (return Nothing in Elm, "nothing" in Erlang).
-        
-        Note
+        You are given an array(list) strarr of strings and an integer k. Your
+        task is to return the first longest string consisting of k consecutive
+        strings taken in the array. In the same way: longest_consec(["zone",
+        "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) -->
+        "abigailtheta" n being the length of the string array, if n = 0 or k > n
+        or k <= 0 return "" (return Nothing in Elm, "nothing" in Erlang). Note
         consecutive strings : follow one after another without an interruption
-                 <pre class="margin_pre">
+        <pre class="margin_pre">
                      <code class="language-js">
    Examples:
    strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2
@@ -139,16 +206,13 @@ Write a function that removes the spaces from the string, then return the result
    трех последовательных строк: `"this"`, `"is"`, и `"a"`.
                      </code>
                     </pre>
-                </div>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
-        Complete the solution so that the function will break up camel casing, using a space between words.
-
-        Example
-        "camelCasing"  =>  "camel Casing"
-        "identifier"   =>  "identifier"
-        ""             =>  ""
-                 <pre class="margin_pre">
+        Complete the solution so that the function will break up camel casing,
+        using a space between words. Example "camelCasing" => "camel Casing"
+        "identifier" => "identifier" "" => ""
+        <pre class="margin_pre">
                      <code class="language-js">
       function breakCamelCase(str) {
         return str.replace(/[A-Z]/g, ' $&');
@@ -172,7 +236,7 @@ Write a function that removes the spaces from the string, then return the result
       }
                      </code>
                     </pre>
-                </div>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
         Write a function to split a string and convert it into an array of
