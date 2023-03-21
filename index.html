@@ -40,6 +40,7 @@
       </div>
       <div class="null"></div>
 
+      <!-- =================================================================================== -->
       <!-- <div class="discription">
 
                  <pre class="margin_pre">
@@ -47,6 +48,9 @@
           
                      </code>
                     </pre>
+                    <code class="language-js">
+          
+                     </code>
                 </div> -->
       <!-- =================================================================================== -->
       <!-- <div class="discription">
@@ -56,6 +60,9 @@
           
                      </code>
                     </pre>
+                    <code class="language-js">
+          
+                     </code>
                 </div> -->
       <!-- =================================================================================== -->
       <!-- <div class="discription">
@@ -65,26 +72,167 @@
           
                      </code>
                     </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
                 </div> -->
       <!-- =================================================================================== -->
       <div class="discription">
-        Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
-        [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
+<br>
+Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+<br>
+Function should return true if it is possible and false if not.
                  <pre class="margin_pre">
+                     <code class="language-js">
+   const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+     return mpg*fuelLeft>distanceToPump ? true : false ;
+   };
+   console.log(zeroFuel(50,3,2));
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Given an array of integers. Return an array, where the first element is
+        the count of positives numbers and the second element is sum of negative
+        numbers. 0 is neither positive nor negative. If the input is an empty
+        array or is null, return an empty array.
+        <br />
+        Example <br />
+        For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you
+        should return [10, -65].
+        <pre class="margin_pre">
+                     <code class="language-js">
+function countPositivesSumNegatives(input) {
+  if (!input || input.length === 0) {
+    return [];
+  }
+  const result = input.reduce((accumulator, currentValue) => {
+    if (currentValue > 0) {
+      accumulator[0]++;
+    } else if (currentValue < 0) {
+      accumulator[1] += currentValue;
+    }
+    return accumulator;
+  }, [0, 0]);
+  return result;
+}
+Примеры вызова функции:
+countPositivesSumNegatives([1, -2, 3, 0, -5]); // [2, -7]
+countPositivesSumNegatives([1, 2, 3]); // [3, 0]
+countPositivesSumNegatives([-1, -2, -3]); // [0, -6]
+countPositivesSumNegatives([]); // []
+countPositivesSumNegatives(null); // []
+                     </code>
+                    </pre>
+        <code class="language-js">
+          Для решения данной задачи мы можем использовать метод .reduce() для
+          подсчета количества положительных чисел и суммы отрицательных чисел. В
+          качестве аргумента метода .reduce() мы передаем функцию, которая будет
+          совершать операции над элементами массива. В данном случае, начальным
+          значением аккумулятора будет [0, 0] - массив, где первый элемент равен
+          0 (начальное количество положительных чисел), а второй элемент равен 0
+          (начальная сумма отрицательных чисел). Далее, для каждого элемента
+          массива мы проводим проверку. Если элемент положительный, мы добавляем
+          1 к количеству положительных чисел. Если элемент отрицательный, мы
+          добавляем его значение к сумме отрицательных чисел. Если элемент равен
+          0, мы ничего не делаем. После того, как мы прошлись по всем элементам
+          массива, мы возвращаем аккумулятор, который содержит количество
+          положительных чисел в первом элементе и сумму отрицательных чисел во
+          втором элементе. Код решения на JavaScript:
+        </code>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        <pre class="margin_pre">
+                     <code class="language-js">
+          function positiveSum(arr) {
+   return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
+}
+                     </code>
+                    </pre>
+        <code class="language-js">
+          Эта функция принимает массив чисел в качестве аргумента и возвращает
+          сумму всех положительных чисел в массиве. Метод `reduce` используется
+          для итерации по элементам массива и суммирования значений. В данном
+          случае второй аргумент функции `reduce` это начальное значение
+          аккумулятора, в нашем случае это 0. Далее, используется тернарный
+          оператор `(b > 0 ? b : 0)`, который проверяет, является ли текущий
+          элемент массива положительным. Если это так, то значение добавляется к
+          аккумулятору, если нет - то добавляется 0. В итоге, функция возвращает
+          сумму всех положительных элементов массива.
+        </code>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        You get an array of numbers, return the sum of all of the positives
+        ones.
+        <br />
+        Example [1,-4,7,12] => 1 + 7 + 12 = 20
+        <br />
+        Note: if there is nothing to sum, the sum is default to 0.
+        <pre class="margin_pre">
+                     <code class="language-js">
+    function positiveSum(arr) {
+      let positiveArr = arr.filter(num => num > 0 );
+      if (positiveArr!=''){
+        return positiveArr.reduce((acc, cur) => acc + cur);
+      }
+      return 0;
+    }
+                     </code>
+                    </pre>
+        <code class="language-js">
+          Эта функция называется positiveSum. Она принимает массив (arr) чисел в
+          качестве аргумента. Сначала функция использует метод filter для
+          создания нового массива, в котором остаются только положительные числа
+          (num > 0). Затем функция проверяет, не является ли новый массив
+          пустым. Если массив не пустой, то функция использует метод reduce для
+          вычисления суммы всех чисел в массиве. Результат суммирования
+          возвращается из функции. Если новый массив пустой, то функция
+          возвращает 0.
+        </code>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Given a non-empty array of integers, return the result of multiplying
+        the values together in order.
+        <br />
+        Example: <br />
+        [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+        <pre class="margin_pre">
                      <code class="language-js">
      function grow(x){
        return x.reduce((acc, cur) => acc * cur);
        }
                      </code>
                     </pre>
-                </div>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
-        Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
-        For example (Input -> Output):
-        2 -> 3 (1 + 2)
+        Write a program that finds the summation of every number from 1 to num.
+        The number will always be a positive integer greater than 0.
+        <br />
+        For example (Input -> Output): <br />
+        2 -> 3 (1 + 2) <br />
         8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
-                 <pre class="margin_pre">
+        <pre class="margin_pre">
                      <code class="language-js">
     var summation = function (num) {
       let myArray = [];
@@ -99,7 +247,7 @@
     const summation = n => n * (n + 1) / 2;
                      </code>
                     </pre>
-                </div>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
         A pangram is a sentence that contains every single letter of the
@@ -146,8 +294,10 @@ console.log(isPangram("Hello, world!")); // false
 function isPangram(string){
   return (string.match(/([a-z])(?!.*\1)/ig) || []).length === 26;
 }
-
-Эта функция определяет, является ли заданная строка "панграммой", 
+                     </code>
+                    </pre>
+                    <code class="language-js">
+                     Эта функция определяет, является ли заданная строка "панграммой", 
 то есть содержит ли она все буквы алфавита 
 от A до Z (без учета регистра). Функция использует регулярное 
 выражение `([a-z])(?!.*\1)`, которое ищет повторяющиеся буквы 
@@ -156,8 +306,7 @@ function isPangram(string){
 значением 26 (количество букв в английском алфавите).
 Если функция находит все 26 букв в строке, то 
 возвращает `true`, иначе `false`.
-                     </code>
-                    </pre>
+                    </code>
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
@@ -197,15 +346,11 @@ function isPangram(string){
    The first that came is "folingtrashy" so 
    longest_consec(strarr, 2) should return "folingtrashy".
 
-   Решение на JavaScript:
-
   function longestConsec(strarr, k) {
     if (k > strarr.length || k <= 0) {
         return "";
     }
-    
     let longestStr = "";
-  
     for (let i = 0; i < strarr.length - k + 1; i++) {
         const currentStr = strarr.slice(i, i + k).join("");
         
@@ -213,29 +358,29 @@ function isPangram(string){
             longestStr = currentStr;
         }
     }
-  
     return longestStr;
     }
-
-   Эта функция принимает входные параметры `strarr` (массив строк)
-   и `k` (целочисленное значение), и возвращает первую самую 
-   длинную строку, состоящую из k последовательных строк из массива.
-   Сначала мы проверяем, если k равен 0 или больше, чем длина
-   массива строк `strarr`, то функция возвращает пустую строку. 
-   Далее мы создаем переменную `longestStr`, которая будет
-   хранить самую длинную строку. Затем мы используем цикл `for`,
-   чтобы перебрать каждую последовательность строк длины `k`
-   и сравниваем их длины с длиной самой длинной строки. Если 
-   текущая последовательность строк длиннее, чем самая длинная, 
-   то мы обновляем значение переменной `longestStr`. В конце функции,
-   мы возвращаем значение самой длинной строки.
-   Например, если 
-   `strarr` равен `["hello", "world", "this", "is", "a", "test"]` 
-   и `k` равно `3`, то функция вернет строку `"thisisatest"`. 
-   Это происходит потому, что самая длинная строка состоит из 
-   трех последовательных строк: `"this"`, `"is"`, и `"a"`.
                      </code>
                     </pre>
+                    <code class="language-js">
+                     Эта функция принимает входные параметры `strarr` (массив строк)
+  и `k` (целочисленное значение), и возвращает первую самую 
+  длинную строку, состоящую из k последовательных строк из массива.
+  Сначала мы проверяем, если k равен 0 или больше, чем длина
+  массива строк `strarr`, то функция возвращает пустую строку. 
+  Далее мы создаем переменную `longestStr`, которая будет
+  хранить самую длинную строку. Затем мы используем цикл `for`,
+  чтобы перебрать каждую последовательность строк длины `k`
+  и сравниваем их длины с длиной самой длинной строки. Если 
+  текущая последовательность строк длиннее, чем самая длинная, 
+  то мы обновляем значение переменной `longestStr`. В конце функции,
+  мы возвращаем значение самой длинной строки.
+  Например, если 
+  `strarr` равен `["hello", "world", "this", "is", "a", "test"]` 
+  и `k` равно `3`, то функция вернет строку `"thisisatest"`. 
+  Это происходит потому, что самая длинная строка состоит из 
+  трех последовательных строк: `"this"`, `"is"`, и `"a"`.
+                    </code>
       </div>
       <!-- =================================================================================== -->
       <div class="discription">

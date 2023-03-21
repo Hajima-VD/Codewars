@@ -128,3 +128,79 @@ var summation = function (num) {
   return myArray.reduce((acc, cur) => acc + cur);
 };
 console.log(summation(6));
+
+
+
+
+
+Вот пример кода на JavaScript, который сортирует массив, оставляя только положительные числа:
+let arr = [-1, 5, 0, 3, -4, 2, 7];
+
+let positiveArr = arr.filter(num => num > 0).sort((a, b) => a - b);
+
+console.log(positiveArr); // Output: [2, 3, 5, 7]
+Для этого мы используем метод filter, чтобы отфильтровать только положительные числа, а затем метод sort для их сортировки в порядке возрастания.
+
+function positiveSum(arr) {
+  let positiveArr = arr.filter(num => num > 0).sort((a, b) => a - b);
+  let NegativeArr = arr.filter(num => num <= 0).sort((a, b) => a - b);
+  positiveArr = [positiveArr.reduce((acc, cur) => acc + cur)];
+  NegativeArr= [NegativeArr.reduce((acc, cur) => acc- cur)];
+const sum=positiveArr + NegativeArr;
+  return  sum;
+};
+
+
+
+
+
+function positiveSum(arr) {
+  
+    let positiveArr = arr.filter(num => num > 0 );
+    console.log(positiveArr);
+    if (positiveArr!=''){
+      return positiveArr.reduce((acc, cur) => acc + cur);
+    }
+    return 0;
+  }
+
+  function positiveSum(arr) {
+    return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
+ }
+
+
+console.log(positiveSum([-23,-23]));
+
+
+function countPositivesSumNeinputgatives(input) {
+  const sumNegative = input.reduce((a,b)=> a + (b < 0 ? b : 0),0);
+  let sumPositive = input.filter(num => num > 0);
+  if(sumPositive!='' && sumNegative!=0   ){
+    return  sum=[sumPositive[sumPositive.length-1] , sumNegative] ; 
+  } else {return sum=[]}
+ }
+
+
+ function countPositivesSumNeinputgatives(input) {
+  if (!input || input.length === 0) {
+    return [];
+  }
+  const result = input.reduce((accumulator, currentValue) => {
+    if (currentValue > 0) {
+      accumulator[0]++;
+    } else if (currentValue < 0) {
+      accumulator[1] += currentValue;
+    }
+    return accumulator;
+  }, [0, 0]);
+  return result;
+}
+
+
+ console.log(countPositivesSumNeinputgatives([12,0,2,34,6,-12,23,-11]))
+
+
+ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return mpg*fuelLeft>distanceToPump ? true : false ;
+};
+console.log(zeroFuel(50,3,2));
