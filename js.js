@@ -204,3 +204,50 @@ function countPositivesSumNeinputgatives(input) {
   return mpg*fuelLeft>distanceToPump ? true : false ;
 };
 console.log(zeroFuel(50,3,2));
+
+
+
+
+const arr = [1, 2, 3, 4, 5];
+
+const squaredArr = arr.map(num => {
+  return num ** 2;
+});
+
+console.log(squaredArr); // [1, 4, 9, 16, 25]
+
+
+function squareDigits(num){
+  return +num.toString().split('').map(x => {
+    return x ** 2;
+  }).join('');
+}
+console.log(squareDigits(93723));
+
+
+
+Math.sqrt(x)
+
+const myNumber = 5.34;
+if(Number.isInteger(myNumber)) {
+  console.log(`${myNumber} is an integer`);
+} else {
+  console.log(`${myNumber} is not an integer`);
+}
+
+var isSquare = function(n){
+return Number.isInteger(Math.sqrt(n)) ;  
+
+}
+
+console.log(isSquare(4));
+
+var isSquare = function(n){
+  const num = Math.sqrt(n);
+  console.log(num);
+  return Number.isInteger(num) ; 
+
+}
+
+console.log(isSquare(4));
+

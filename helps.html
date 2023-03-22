@@ -171,121 +171,135 @@
       <!-- =================================================================================== -->
       <div class="discription ">
         <code class="language-js">
-        </code>
-        <code class="language-js ">
- 
+          Код который возводит каждый элемент массива во 2 степень на JavaScript.
         </code>
         <pre class="margin_pre">
-                     <code class="language-js ">
- 
+        <code class="language-js ">
+  const arr = [1, 2, 3, 4, 5];
+  const squaredArr = arr.map(num => {
+    return num ** 2;
+  });
+  console.log(squaredArr); // [1, 4, 9, 16, 25]
+        </code>
+      </pre>
+          <code class="language-js ">
+                       Этот код создаёт новый массив, в котором каждый элемент возводится во 2 степень. Метод map() позволяет применять функцию ко всем элементам массива и возвращать новый массив с изменёнными значениями.
                      </code>
-                    </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription ">
         <code class="language-js">
+
         </code>
+        <pre class="margin_pre">
+          <code class="language-js ">
+  function squareDigits(num) {
+    let digits = num.toString().split(''); // превращаем число в массив цифр
+    let squaredDigits = digits.map(n => n * n); // возводим каждую цифру в квадрат
+    let result = squaredDigits.join(''); // склеиваем значения в новое число
+    return parseInt(result); // превращаем строку в число и возвращаем результат
+  }
+          </code>
+        </pre>
         <code class="language-js ">
  
         </code>
-        <pre class="margin_pre">
-                     <code class="language-js ">
- 
-                     </code>
-                    </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription ">
         <code class="language-js">
+          Для проверки, является ли целым числом, можно использовать функцию Number.isInteger(), 
+          
         </code>
+        <pre class="margin_pre">
+          <code class="language-js ">
+например:
+const myNumber = 5;
+if(Number.isInteger(myNumber)) {
+  console.log(`${myNumber} is an integer`);
+} else {
+  console.log(`${myNumber} is not an integer`);
+}
+Результат выполнения данного кода будет: 5 is an integer.
+          </code>
+        </pre>
         <code class="language-js ">
  
         </code>
-        <pre class="margin_pre">
-                     <code class="language-js ">
- 
-                     </code>
-                    </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription ">
         <code class="language-js">
+
         </code>
+        <pre class="margin_pre">
+          <code class="language-js ">
+            
+          </code>
+        </pre>
         <code class="language-js ">
  
         </code>
-        <pre class="margin_pre">
-                     <code class="language-js ">
- 
-                     </code>
-                    </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription ">
         <code class="language-js">
+
         </code>
+        <pre class="margin_pre">
+          <code class="language-js ">
+            
+          </code>
+        </pre>
         <code class="language-js ">
  
         </code>
-        <pre class="margin_pre">
-                     <code class="language-js ">
- 
-                     </code>
-                    </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription ">
         <code class="language-js">
+
         </code>
+        <pre class="margin_pre">
+          <code class="language-js ">
+            
+          </code>
+        </pre>
         <code class="language-js ">
  
         </code>
-        <pre class="margin_pre">
-                     <code class="language-js ">
- 
-                     </code>
-                    </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription ">
         <code class="language-js">
+
         </code>
+        <pre class="margin_pre">
+          <code class="language-js ">
+            
+          </code>
+        </pre>
         <code class="language-js ">
  
         </code>
-        <pre class="margin_pre">
-                     <code class="language-js ">
- 
-                     </code>
-                    </pre>
       </div>
       <!-- =================================================================================== -->
       <div class="discription ">
         <code class="language-js">
+
         </code>
+        <pre class="margin_pre">
+          <code class="language-js ">
+            
+          </code>
+        </pre>
         <code class="language-js ">
  
         </code>
-        <pre class="margin_pre">
-                     <code class="language-js ">
- 
-                     </code>
-                    </pre>
       </div>
       <!-- =================================================================================== -->
-      <div class="discription ">
-        <code class="language-js">
-        </code>
-        <code class="language-js ">
- 
-        </code>
-        <pre class="margin_pre">
-                     <code class="language-js ">
- 
-                     </code>
-                    </pre>
-      </div>
-      <!-- =================================================================================== -->
+      
+      
   
     </div>
     <script src="./prism.js"></script>
