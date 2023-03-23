@@ -269,3 +269,10 @@ function removeEveryOther(arr){
 
 }
 console.log(removeEveryOther('sdf', 'aaaaaa', 'dsfsd', 'ggggg', 'sdfsdss'));
+
+function friend(friends){
+  const arr = friends.filter((element, index) => element.length <= 4 && typeof element == Number );
+ return arr ;
+ }
+
+ console.log(friend(['sdf', 'aaa', 'dsd', 'gggg', 'sdfsdss','9']));

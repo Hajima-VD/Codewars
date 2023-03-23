@@ -89,49 +89,101 @@
                      </code>
                 </div> -->
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
+      <div class="discription">
+        Make a program that filters a list of strings and returns a list with
+        only your friends name in it. If a name has exactly 4 letters in it, you
+        can be sure that it has to be a friend of yours! Otherwise, you can be
+        sure he's not...
+        <br />
+        Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan",
+        "Yous"]
+        <br />
+        i.e.
+        <br />
+        friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"] Note: keep
+        the original order of the names in the output.
+        <br />
+        Для решения данной задачи на JavaScript можно использовать метод
+        filter() для массивов.
+        <br />
+        Первым шагом можно проверить каждый элемент массива на наличие только
+        буквенных символов, например, с помощью регулярного выражения [^a-zA-Z].
+        Если такие символы есть в имени друга, то этот элемент должен быть
+        исключен из итогового массива.
+        <br />
+        Затем, можно применить метод filter(), чтобы отфильтровать исходный
+        массив с помощью условия на длину имени: если длина имени в точности
+        равна 4, то элемент добавляется в итоговый массив.
+        <br />
+        Для проверки можно использовать следующий код:
+        <pre class="margin_pre">
                      <code class="language-js">
-          
+                      
+                    
+  function filterFriends(names) {
+    const validNames = names.filter(name => /^[a-zA-Z]+$/.test(name));
+     // проверяем на наличие только буквенных символов
+    const friends = validNames.filter(name => name.length === 4); 
+    // отбираем только имена друзей длины 4
+    return friends;
+  }
+  console.log(filterFriends(["Ryan", "Kieran", "Mark", "123", "Bob", "Yous"]));
+   // ["Ryan", "Mark", "Yous"]
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div> -->
+        <code class="language-js">
+          На первой строке мы используем метод filter() для массива names, чтобы
+          удалить все имена, содержащие не только буквенные символы. На второй
+          строке мы используем снова метод filter() для массива validNames,
+          чтобы оставить только имена, длина которых равна 4. Наконец, мы
+          возвращаем массив friends, содержащий только имена друзей длины 4. В
+          результате вызова функции с массивом ["Ryan", "Kieran", "Mark", "123",
+          "Bob", "Yous"] должен вернуться массив ["Ryan", "Mark", "Yous"].
+        </code>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
-        Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
-      <br>  Example:
-      <br>  ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
-      <br>  None of the arrays will be empty, so you don't have to worry about that!
+        Take an array and remove every second element from the array. Always
+        keep the first element and start removing with the next element.
+        <br />
+        Example: <br />
+        ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep",
+        "Keep", ...] <br />
+        None of the arrays will be empty, so you don't have to worry about that!
 
-
-
-                 <pre class="margin_pre">
+        <pre class="margin_pre">
                      <code class="language-js">
           const removeEveryOther = arr => arr.filter((_, i) => !(i % 2));
                      </code>
                     </pre>
-                    <code class="language-js">
-                      Эта функция удаляет из массива каждый второй элемент и возвращает новый массив, содержащий только элементы с индексами, кратными двум (то есть первый, третий, пятый и т. д.).
-
-                      Чтобы это сделать, функция использует метод filter, который применяет функцию сравнения, переданную ему в качестве аргумента, к каждому элементу в массиве. В данном случае эта функция сравнения имеет два аргумента: первый - текущий элемент массива, а второй - его индекс.
-                      
-                      В теле функции сравнения используется оператор %, который возвращает остаток от деления индекса на два. Если остаток равен нулю, тогда индекс является четным, и элемент сохраняется в результате. Если же остаток не равен нулю, то элемент не сохраняется в результате.
-                      
-                      Таким образом, при вызове функции removeEveryOther с массивом [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] возвращаемый результат будет [1, 3, 5, 7, 9].
-                     </code>
-                </div>
+        <code class="language-js">
+          Эта функция удаляет из массива каждый второй элемент и возвращает
+          новый массив, содержащий только элементы с индексами, кратными двум
+          (то есть первый, третий, пятый и т. д.). Чтобы это сделать, функция
+          использует метод filter, который применяет функцию сравнения,
+          переданную ему в качестве аргумента, к каждому элементу в массиве. В
+          данном случае эта функция сравнения имеет два аргумента: первый -
+          текущий элемент массива, а второй - его индекс. В теле функции
+          сравнения используется оператор %, который возвращает остаток от
+          деления индекса на два. Если остаток равен нулю, тогда индекс является
+          четным, и элемент сохраняется в результате. Если же остаток не равен
+          нулю, то элемент не сохраняется в результате. Таким образом, при
+          вызове функции removeEveryOther с массивом [1, 2, 3, 4, 5, 6, 7, 8, 9,
+          10] возвращаемый результат будет [1, 3, 5, 7, 9].
+        </code>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
-        Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
-        <br>  Example:
-        <br>  ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
-        <br>  None of the arrays will be empty, so you don't have to worry about that!
-       <br>
-       <br> Для решения данной задачи мы используем функцию
+        Take an array and remove every second element from the array. Always
+        keep the first element and start removing with the next element.
+        <br />
+        Example: <br />
+        ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep",
+        "Keep", ...] <br />
+        None of the arrays will be empty, so you don't have to worry about that!
+        <br />
+        <br />
+        Для решения данной задачи мы используем функцию
         `removeEverySecondElement`. Внутри функции применяется метод массива
         `filter`, который работает следующим образом:
         <br />

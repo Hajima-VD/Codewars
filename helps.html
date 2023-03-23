@@ -254,7 +254,10 @@ for (let i = 0; i < myArray.length; i++) {
         </code>
         <pre class="margin_pre">
           <code class="language-js ">
-            
+  const validNames = names.filter(name => /^[a-zA-Z]+$/.test(name));
+  // проверяем на наличие только буквенных символов
+ const friends = validNames.filter(name => name.length === 4); 
+ // отбираем только имена друзей длины 4
           </code>
         </pre>
         <code class="language-js ">
