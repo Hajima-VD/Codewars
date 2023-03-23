@@ -251,3 +251,21 @@ var isSquare = function(n){
 
 console.log(isSquare(4));
 
+
+let myArray = ['sdf', 'aaaaaa', 'dsfsd', 'ggggg', 'sdfsdss', ];
+for (let i = 0; i < myArray.length; i++) {
+  if (i % 2 === 0) {
+    console.log(myArray[i]);
+  }
+}
+
+function removeEveryOther(arr){
+  let myArray=arr;
+  for (let i = 0; i < myArray.length; i++) {
+  if (i % 2 === 0) {
+    myArray= myArray[i];
+  }
+}
+
+}
+console.log(removeEveryOther('sdf', 'aaaaaa', 'dsfsd', 'ggggg', 'sdfsdss'));

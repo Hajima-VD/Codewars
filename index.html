@@ -65,46 +65,152 @@
                      </code>
                 </div> -->
       <!-- =================================================================================== -->
-      <div class="discription">
-        You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
-        However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a perfect square.
-        <br> Task <br>
-        Given an integral number, determine if it's a square number:
-        In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
-        The tests will always use some integral number, so don't worry about that in dynamic typed languages.
-        <br>
-        Examples
-        <br>
-        -1  =>  false
-        <br>
-        0  =>  true
-        <br>
-        3  =>  false
-        <br>
-        4  =>  true
-        <br>
-        25  =>  true
-        <br>
-        26  =>  false
+      <!-- <div class="discription">
+
                  <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+      <br>  Example:
+      <br>  ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+      <br>  None of the arrays will be empty, so you don't have to worry about that!
+
+
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          const removeEveryOther = arr => arr.filter((_, i) => !(i % 2));
+                     </code>
+                    </pre>
+                    <code class="language-js">
+                      Эта функция удаляет из массива каждый второй элемент и возвращает новый массив, содержащий только элементы с индексами, кратными двум (то есть первый, третий, пятый и т. д.).
+
+                      Чтобы это сделать, функция использует метод filter, который применяет функцию сравнения, переданную ему в качестве аргумента, к каждому элементу в массиве. В данном случае эта функция сравнения имеет два аргумента: первый - текущий элемент массива, а второй - его индекс.
+                      
+                      В теле функции сравнения используется оператор %, который возвращает остаток от деления индекса на два. Если остаток равен нулю, тогда индекс является четным, и элемент сохраняется в результате. Если же остаток не равен нулю, то элемент не сохраняется в результате.
+                      
+                      Таким образом, при вызове функции removeEveryOther с массивом [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] возвращаемый результат будет [1, 3, 5, 7, 9].
+                     </code>
+                </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+        <br>  Example:
+        <br>  ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+        <br>  None of the arrays will be empty, so you don't have to worry about that!
+       <br>
+       <br> Для решения данной задачи мы используем функцию
+        `removeEverySecondElement`. Внутри функции применяется метод массива
+        `filter`, который работает следующим образом:
+        <br />
+        1. Метод `filter()` вызывается для исходного массива. <br />
+        2. Мы передаем в `filter` анонимную стрелочную функцию `(element, index)
+        => index % 2 === 0`, которая принимает два аргумента: `element` и
+        `index`. Функция будет вызвана для каждого элемента массива. <br />
+        3. Если условие внутри стрелочной функции `index % 2 === 0` выполняется
+        (то есть индекс элемента делится на 2 без остатка), то элемент остается
+        в выводимом массиве, в противном случае - удаляется. <br />
+        4. В результате мы получаем новый массив, в котором удалены все элементы
+        с нечетными индексами (начиная со второго элемента).
+        <pre class="margin_pre">
+        <code class="language-js">
+   function removeEverySecondElement(array) {
+     return array.filter((element, index) => index % 2 === 0);
+   }
+   
+   const inputArray = ["Keep", "Remove", "Keep", "Remove", "Keep"];
+   const resultArray = removeEverySecondElement(inputArray);
+   console.log(resultArray); // ["Keep", "Keep", "Keep"]
+        </code>
+      </pre>
+        <code class="language-js">
+          Шаги для работы с примером: 1. Создаем исходный массив `inputArray`.
+          2. Вызываем функцию `removeEverySecondElement` с исходным массивом в
+          качестве аргумента и получаем результат в переменную `resultArray`. 3.
+          Выводим результат в консоль.
+        </code>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        You like building blocks. You especially like building blocks that are
+        squares. And what you even like more, is to arrange them into a square
+        of square building blocks! However, sometimes, you can't arrange them
+        into a square. Instead, you end up with an ordinary rectangle! Those
+        blasted things! If you just had a way to know, whether you're currently
+        working in vain… Wait! That's it! You just have to check if your number
+        of building blocks is a perfect square.
+        <br />
+        Task <br />
+        Given an integral number, determine if it's a square number: In
+        mathematics, a square number or perfect square is an integer that is the
+        square of an integer; in other words, it is the product of some integer
+        with itself. The tests will always use some integral number, so don't
+        worry about that in dynamic typed languages.
+        <br />
+        Examples
+        <br />
+        -1 => false
+        <br />
+        0 => true
+        <br />
+        3 => false
+        <br />
+        4 => true
+        <br />
+        25 => true
+        <br />
+        26 => false
+        <pre class="margin_pre">
                      <code class="language-js">
   var isSquare = function(n){
     return Number.isInteger(Math.sqrt(n)) ; 
    }
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div>
+        <code class="language-js"> </code>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
-Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
-For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
-Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
-<br>
-Note: The function accepts an integer and returns an integer.
-                 <pre class="margin_pre">
+        Welcome. In this kata, you are asked to square every digit of a number
+        and concatenate them. For example, if we run 9119 through the function,
+        811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81) Example
+        #2: An input of 765 will/should return 493625 because 72 is 49, 62 is
+        36, and 52 is 25. (49-36-25)
+        <br />
+        Note: The function accepts an integer and returns an integer.
+        <pre class="margin_pre">
                      <code class="language-js">
   function squareDigits(num){
     return +num.toString().split('').map(x => {
@@ -113,18 +219,20 @@ Note: The function accepts an integer and returns an integer.
    }
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div>
+        <code class="language-js"> </code>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
-You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
-<br>
-Considering these factors, write a function that tells you if it is possible to get to the pump or not.
-<br>
-Function should return true if it is possible and false if not.
-                 <pre class="margin_pre">
+        You were camping with your friends far away from home, but when it's
+        time to go back, you realize that your fuel is running out and the
+        nearest pump is 50 miles away! You know that on average, your car runs
+        on about 25 miles per gallon. There are 2 gallons left.
+        <br />
+        Considering these factors, write a function that tells you if it is
+        possible to get to the pump or not.
+        <br />
+        Function should return true if it is possible and false if not.
+        <pre class="margin_pre">
                      <code class="language-js">
    const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
      return mpg*fuelLeft>distanceToPump ? true : false ;
@@ -132,10 +240,8 @@ Function should return true if it is possible and false if not.
    console.log(zeroFuel(50,3,2));
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div>
+        <code class="language-js"> </code>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
         Given an array of integers. Return an array, where the first element is
@@ -325,17 +431,16 @@ function isPangram(string){
 }
                      </code>
                     </pre>
-                    <code class="language-js">
-                     Эта функция определяет, является ли заданная строка "панграммой", 
-то есть содержит ли она все буквы алфавита 
-от A до Z (без учета регистра). Функция использует регулярное 
-выражение `([a-z])(?!.*\1)`, которое ищет повторяющиеся буквы 
-в строке и исключает их из поиска. Затем функция проверяет 
-количество найденных уникальных букв и сравнивает его со 
-значением 26 (количество букв в английском алфавите).
-Если функция находит все 26 букв в строке, то 
-возвращает `true`, иначе `false`.
-                    </code>
+        <code class="language-js">
+          Эта функция определяет, является ли заданная строка "панграммой", то
+          есть содержит ли она все буквы алфавита от A до Z (без учета
+          регистра). Функция использует регулярное выражение `([a-z])(?!.*\1)`,
+          которое ищет повторяющиеся буквы в строке и исключает их из поиска.
+          Затем функция проверяет количество найденных уникальных букв и
+          сравнивает его со значением 26 (количество букв в английском
+          алфавите). Если функция находит все 26 букв в строке, то возвращает
+          `true`, иначе `false`.
+        </code>
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
@@ -391,25 +496,23 @@ function isPangram(string){
     }
                      </code>
                     </pre>
-                    <code class="language-js">
-                     Эта функция принимает входные параметры `strarr` (массив строк)
-  и `k` (целочисленное значение), и возвращает первую самую 
-  длинную строку, состоящую из k последовательных строк из массива.
-  Сначала мы проверяем, если k равен 0 или больше, чем длина
-  массива строк `strarr`, то функция возвращает пустую строку. 
-  Далее мы создаем переменную `longestStr`, которая будет
-  хранить самую длинную строку. Затем мы используем цикл `for`,
-  чтобы перебрать каждую последовательность строк длины `k`
-  и сравниваем их длины с длиной самой длинной строки. Если 
-  текущая последовательность строк длиннее, чем самая длинная, 
-  то мы обновляем значение переменной `longestStr`. В конце функции,
-  мы возвращаем значение самой длинной строки.
-  Например, если 
-  `strarr` равен `["hello", "world", "this", "is", "a", "test"]` 
-  и `k` равно `3`, то функция вернет строку `"thisisatest"`. 
-  Это происходит потому, что самая длинная строка состоит из 
-  трех последовательных строк: `"this"`, `"is"`, и `"a"`.
-                    </code>
+        <code class="language-js">
+          Эта функция принимает входные параметры `strarr` (массив строк) и `k`
+          (целочисленное значение), и возвращает первую самую длинную строку,
+          состоящую из k последовательных строк из массива. Сначала мы
+          проверяем, если k равен 0 или больше, чем длина массива строк
+          `strarr`, то функция возвращает пустую строку. Далее мы создаем
+          переменную `longestStr`, которая будет хранить самую длинную строку.
+          Затем мы используем цикл `for`, чтобы перебрать каждую
+          последовательность строк длины `k` и сравниваем их длины с длиной
+          самой длинной строки. Если текущая последовательность строк длиннее,
+          чем самая длинная, то мы обновляем значение переменной `longestStr`. В
+          конце функции, мы возвращаем значение самой длинной строки. Например,
+          если `strarr` равен `["hello", "world", "this", "is", "a", "test"]` и
+          `k` равно `3`, то функция вернет строку `"thisisatest"`. Это
+          происходит потому, что самая длинная строка состоит из трех
+          последовательных строк: `"this"`, `"is"`, и `"a"`.
+        </code>
       </div>
       <!-- =================================================================================== -->
       <div class="discription">
