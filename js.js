@@ -193,3 +193,26 @@ for(var i = 0; i < array.length; i++) {
 }
 
 console.log(array); // [11, 12, 13, 14, 15]
+
+function expandedForm(num) {
+  let str = num.toString(); // преобразуем число в строку
+  let result = ''; // инициализируем результат
+  let zeros = ''; // ноль как заполнитель
+
+  // Перебираем каждую цифру в строке слева направо
+  for (let i = 0; i < str.length; i++) {
+    let digit = str[i]; // текущая цифра
+    let multiplier = Math.pow(10, str.length - 1 - i); // множитель для разряда
+    let expanded = digit * multiplier; // результат для данной цифры и разряда
+
+    // Если текущая цифра не равна 0, добавляем результат для данной цифры и разряда в итоговую строку
+    if (digit !== '0') {
+      result = result + zeros + expanded ;
+      zeros = ' + '; // заполняем ноль как разделитель между слагаемыми
+    }
+  }
+
+  return result;
+}
+
+console.log(expandedForm(2323032));
