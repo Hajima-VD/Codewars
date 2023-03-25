@@ -65,6 +65,130 @@
                      </code>
                 </div> -->
       <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <div class="discription">
+        <br />
+        You will be given a number and you will need to return it as a string in
+        Expanded Form. For example: <br />
+        expandedForm(12); // Should return '10 + 2' <br />
+        expandedForm(42); // Should return '40 + 2' <br />
+        expandedForm(70304); // Should return '70000 + 300 + 4' <br />
+        NOTE: All numbers will be whole numbers greater than 0.
+        <br />
+        <br />
+        <code class="language-js">
+          Для решения этой задачи нужно раскладывать число на его разряды. Для
+          этого с помощью метода split() мы разбиваем число на отдельные цифры,
+          а затем находим единицы, десятки и сотни, и если число равно 0,
+          пропускаем его. Затем мы объединяем полученные строки с помощью "+" и
+          возвращаем итоговую строку.
+        </code>
+        <pre class="margin_pre">
+                     <code class="language-js">
+   function expandedForm(num) {
+     let str = num.toString(); // преобразуем число в строку
+     let result = ''; // инициализируем результат
+     let zeros = ''; // ноль как заполнитель
+   
+     // Перебираем каждую цифру в строке слева направо
+     for (let i = 0; i < str.length; i++) {
+       let digit = str[i]; // текущая цифра
+       let multiplier = Math.pow(10, str.length - 1 - i); // множитель для разряда
+       let expanded = digit * multiplier; // результат для данной цифры и разряда
+   
+       // Если текущая цифра не равна 0, добавляем результат для данной цифры и разряда в итоговую строку
+       if (digit !== '0') {
+         result += zeros + expanded;
+         zeros = ' + '; // заполняем ноль как разделитель между слагаемыми
+       }
+     }
+   
+     return result;
+   }
+   Пример использования:
+   console.log(expandedForm(12)); // '10 + 2'
+   console.log(expandedForm(42)); // '40 + 2'
+   console.log(expandedForm(70304)); // '70000 + 300 + 4'
+                     </code>
+                    </pre>
+        <code class="language-js"> </code>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        <br />
+        Write a function to convert a name into initials. This kata strictly
+        takes two words with one space in between them. <br />
+        The output should be two capital letters with a dot separating them.
+        <br />
+        It should look like this: <br />
+        Sam Harris => S.H <br />
+        patrick feeney => P.F
+        <br />
+        <code class="language-js">
+          Для решения задачи нужно создать функцию, которая принимает на вход
+          строку, содержащую два слова, разделенных пробелом. Для этого можно
+          использовать метод split(' '), который разделит строку на две
+          подстроки, сохраняя их в массив. Затем нужно получить первую букву
+          каждого слова в верхнем регистре и склеить их вместе, разделяя точкой.
+          Вот функция, которая решает эту задачу:
+        </code>
+        <pre class="margin_pre">
+                     <code class="language-js">
+    function getInitials(name) {
+        const words = name.split(' ');
+        const firstLetters = words.map(word => word.charAt(0).toUpperCase());
+        return firstLetters.join('.');
+    }
+                    </code>
+                  </pre>
+        <code class="language-js">
+          Функция split() разделяет строку на две подстроки и сохраняет их в
+          массив `words`. Затем мы вызываем метод map() для массива `words`,
+          чтобы получить первую букву каждого слова в верхнем регистре,
+          используя метод charAt() и toUpperCase(). Мы сохраняем эти буквы в
+          массив `firstLetters`. В конце мы склеиваем элементы массива
+          `firstLetters`, разделяя их точкой, с помощью метода join() и
+          возвращаем результат. Таким образом, при вызове функции
+          getInitials('Sam Harris') мы получим `S.H`, а при вызове
+          `getInitials('patrick feeney')` - `P.F`.
+        </code>
+      </div>
+      <!-- =================================================================================== -->
       <div class="discription">
         Первым шагом необходимо создать функцию, которая будет принимать два
         аргумента - список и число N. Затем мы будем создавать пустой объект, в

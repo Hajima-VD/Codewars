@@ -163,3 +163,33 @@ function deleteNth(arr,n){
 }
 
 console.log(deleteNth([20,37,20,21], 1))
+
+function test(arr){
+
+  let arrM = arr.split('');
+  for (let i = 0; i < arrM.length; i++) {
+    if (+arrM[i]!=0){
+    return  arrM[i]= +arrM[i]*(10**(arrM.length-i)) ;
+    } else  {
+      return "";
+    }
+  }
+  return arrM;
+}
+
+
+console.log(test('231412'));
+
+
+const arr=[2,23,55,656,77];
+console.log(arr[3] + 22);
+
+
+var array = [1, 2, 3, 4, 5];
+
+
+for(var i = 0; i < array.length; i++) {
+  array[i] =  array[i] ;
+}
+
+console.log(array); // [11, 12, 13, 14, 15]
