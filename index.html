@@ -65,29 +65,76 @@
                      </code>
                 </div> -->
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
+      <div class="discription">
+        Первым шагом необходимо создать функцию, которая будет принимать два
+        аргумента - список и число N. Затем мы будем создавать пустой объект, в
+        который будем добавлять уникальные элементы из списка в качестве ключей,
+        и количество их повторений в качестве значений. Далее мы будем
+        проходиться по списку, проверять количество повторений каждого элемента
+        в объекте и добавлять элемент в новый список только в том случае, если
+        количество повторений не превышает N. Когда мы получили новый список, он
+        будет содержать каждый элемент из исходного списка не более N раз, без
+        изменения порядка элементов.
+        <pre class="margin_pre">
                      <code class="language-js">
-          
+     function limitList(list, n) {
+       let obj = {};
+       let result = [];
+       
+       for(let i = 0; i < list.length; i++) {
+         let num = list[i];
+         obj[num] = obj[num] ? obj[num] + 1 : 1;
+         
+         if(obj[num] <= n) {
+           result.push(num);
+         }
+       }
+       
+       return result;
+     }
+     
+     console.log( limitList([1,2,3,1,2,1,2,3], 2) );
+      // [1, 2, 3, 1, 2, 3]
+     console.log( limitList([20,37,20,21], 1) );
+      // [20, 37, 21]
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div> -->
+        <code class="language-js">
+          В первых двух строках создаем функцию и определяем аргументы. Затем
+          создаем пустой объект и пустой массив, который будем заполнять. Далее,
+          при помощи цикла-for, мы проходимся по списку. Для каждого элемента
+          увеличиваем значение его ключа в объекте obj. Если значение этого
+          ключа меньше или равно числу N, то мы добавляем этот элемент в новый
+          массив result. В конце мы возвращаем полученный массив result с
+          ограничением на количество повторений каждого элемента в N.
+        </code>
+      </div>
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
+      <div class="discription">
+        <br />
+        Write function bmi that calculates body mass index (bmi = weight /
+        height2). <br />
+        if bmi <= 18.5 return "Underweight" <br />
+        if bmi <= 25.0 return "Normal" <br />
+        if bmi <= 30.0 return "Overweight" <br />
+        if bmi > 30 return "Obese"
+        <pre class="margin_pre">
                      <code class="language-js">
-          
+    function bmi(weight, height) {
+      const bmi = weight /(height*height)
+      if  (bmi<= 18.5){
+        return "Underweight";
+      } else if(bmi<= 25.0){
+        return  "Normal";
+      } else if(bmi<=30.0){
+        return "Overweight";
+      }else (bmi>30 )
+      return "Obese"
+    }
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div> -->
+        <code class="language-js"> </code>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
         Make a program that filters a list of strings and returns a list with

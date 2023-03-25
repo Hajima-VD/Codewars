@@ -131,148 +131,35 @@ console.log(summation(6));
 
 
 
+function bmi(weight, height) {
+  const num = weight / (height*height)
+  console.log(num);
+  if  (num<= 18.5){
+    return "Underweight";
+  } else  if(num<= 25.0){
+    return  "Normal";
+  }else if(num<=30.0){
+    return "Overweight";
+  }else (num>30 )
+  return "Obese"
+}
+console.log(bmi(80, 1.80))
 
 
-Вот пример кода на JavaScript, который сортирует массив, оставляя только положительные числа:
-let arr = [-1, 5, 0, 3, -4, 2, 7];
-
-let positiveArr = arr.filter(num => num > 0).sort((a, b) => a - b);
-
-console.log(positiveArr); // Output: [2, 3, 5, 7]
-Для этого мы используем метод filter, чтобы отфильтровать только положительные числа, а затем метод sort для их сортировки в порядке возрастания.
-
-function positiveSum(arr) {
-  let positiveArr = arr.filter(num => num > 0).sort((a, b) => a - b);
-  let NegativeArr = arr.filter(num => num <= 0).sort((a, b) => a - b);
-  positiveArr = [positiveArr.reduce((acc, cur) => acc + cur)];
-  NegativeArr= [NegativeArr.reduce((acc, cur) => acc- cur)];
-const sum=positiveArr + NegativeArr;
-  return  sum;
-};
-
-
-
-
-
-function positiveSum(arr) {
+function deleteNth(arr,n){
+  let obj = {};
+  let result = [];
   
-    let positiveArr = arr.filter(num => num > 0 );
-    console.log(positiveArr);
-    if (positiveArr!=''){
-      return positiveArr.reduce((acc, cur) => acc + cur);
+  for(let i = 0; i < arr.length; i++) {
+    let num = arr[i];
+    obj[num] = obj[num] ? obj[num] + 1 : 1;
+    
+    if(obj[num] <= n) {
+      result.push(num);
     }
-    return 0;
   }
-
-  function positiveSum(arr) {
-    return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
- }
-
-
-console.log(positiveSum([-23,-23]));
-
-
-function countPositivesSumNeinputgatives(input) {
-  const sumNegative = input.reduce((a,b)=> a + (b < 0 ? b : 0),0);
-  let sumPositive = input.filter(num => num > 0);
-  if(sumPositive!='' && sumNegative!=0   ){
-    return  sum=[sumPositive[sumPositive.length-1] , sumNegative] ; 
-  } else {return sum=[]}
- }
-
-
- function countPositivesSumNeinputgatives(input) {
-  if (!input || input.length === 0) {
-    return [];
-  }
-  const result = input.reduce((accumulator, currentValue) => {
-    if (currentValue > 0) {
-      accumulator[0]++;
-    } else if (currentValue < 0) {
-      accumulator[1] += currentValue;
-    }
-    return accumulator;
-  }, [0, 0]);
+  
   return result;
 }
 
-
- console.log(countPositivesSumNeinputgatives([12,0,2,34,6,-12,23,-11]))
-
-
- const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-  return mpg*fuelLeft>distanceToPump ? true : false ;
-};
-console.log(zeroFuel(50,3,2));
-
-
-
-
-const arr = [1, 2, 3, 4, 5];
-
-const squaredArr = arr.map(num => {
-  return num ** 2;
-});
-
-console.log(squaredArr); // [1, 4, 9, 16, 25]
-
-
-function squareDigits(num){
-  return +num.toString().split('').map(x => {
-    return x ** 2;
-  }).join('');
-}
-console.log(squareDigits(93723));
-
-
-
-Math.sqrt(x)
-
-const myNumber = 5.34;
-if(Number.isInteger(myNumber)) {
-  console.log(`${myNumber} is an integer`);
-} else {
-  console.log(`${myNumber} is not an integer`);
-}
-
-var isSquare = function(n){
-return Number.isInteger(Math.sqrt(n)) ;  
-
-}
-
-console.log(isSquare(4));
-
-var isSquare = function(n){
-  const num = Math.sqrt(n);
-  console.log(num);
-  return Number.isInteger(num) ; 
-
-}
-
-console.log(isSquare(4));
-
-
-let myArray = ['sdf', 'aaaaaa', 'dsfsd', 'ggggg', 'sdfsdss', ];
-for (let i = 0; i < myArray.length; i++) {
-  if (i % 2 === 0) {
-    console.log(myArray[i]);
-  }
-}
-
-function removeEveryOther(arr){
-  let myArray=arr;
-  for (let i = 0; i < myArray.length; i++) {
-  if (i % 2 === 0) {
-    myArray= myArray[i];
-  }
-}
-
-}
-console.log(removeEveryOther('sdf', 'aaaaaa', 'dsfsd', 'ggggg', 'sdfsdss'));
-
-function friend(friends){
-  const arr = friends.filter((element, index) => element.length <= 4 && typeof element == Number );
- return arr ;
- }
-
- console.log(friend(['sdf', 'aaa', 'dsd', 'gggg', 'sdfsdss','9']));
+console.log(deleteNth([20,37,20,21], 1))
