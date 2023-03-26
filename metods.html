@@ -64,31 +64,52 @@
                     </pre>
                 </div> -->
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-               <p class="metod_discr">
-          <code class="language-js">
-            
-          </code>
+      <div class="discription">
+        <p class="metod_discr">
+          <code class="language-js"> Array.prototype.forEach() </code>
         </p>
-                 <pre class="margin_pre">
+        <pre class="margin_pre">
                      <code class="language-js">
-              
+Метод forEach() выполняет указанную функцию один раз для каждого элемента в массиве.
+const array1 = ['a', 'b', 'c'];
+
+array1.forEach(element => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+
                      </code>
                     </pre>
-                </div> -->
+      </div>
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-               <p class="metod_discr">
-          <code class="language-js">
-            
-          </code>
+      <div class="discription">
+        <p class="metod_discr">
+          <code class="language-js"> String.prototype.repeat() </code>
         </p>
-                 <pre class="margin_pre">
+        <code class="language-js">
+          Метод repeat() конструирует и возвращает новую строку, содержащую
+          указанное количество соединённых вместе копий строки, на которой он
+          был вызван.
+        </code>
+        <pre class="margin_pre">
                      <code class="language-js">
-              
+Синтаксис
+str.repeat(count)
+
+Примеры
+'абв'.repeat(-1);   // RangeError
+'абв'.repeat(0);    // ''
+'абв'.repeat(1);    // 'абв'
+'абв'.repeat(2);    // 'абвабв'
+'абв'.repeat(3.5);  // 'абвабвабв' (количество будет преобразовано в целое число)
+'абв'.repeat(1/0);  // RangeError
+
+({ toString: () => 'абв', repeat: String.prototype.repeat }).repeat(2);
+// 'абвабв' (метод repeat() является обобщённым методом)                
                      </code>
                     </pre>
-                </div> -->
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
         <p class="metod_discr">

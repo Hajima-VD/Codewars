@@ -53,41 +53,150 @@
                      </code>
                 </div> -->
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
+      <div class="discription">
+        You live in the city of Cartesia where all roads are laid out in a
+        perfect grid. You arrived ten minutes too early to an appointment, so
+        you decided to take the opportunity to go for a short walk. The city
+        provides its citizens with a Walk Generating App on their phones --
+        everytime you press the button it sends you an array of one-letter
+        strings representing directions to walk (eg. ['n', 's', 'w', 'e']). You
+        always walk only a single block for each letter (direction) and you know
+        it takes you one minute to traverse one city block, so create a function
+        that will return true if the walk the app gives you will take you
+        exactly ten minutes (you don't want to be early or late!) and will, of
+        course, return you to your starting point. Return false otherwise. Note:
+        you will always receive a valid array containing a random assortment of
+        direction letters ('n', 's', 'e', or 'w' only). It will never give you
+        an empty array (that's not a walk, that's standing still!).
+        <br />
+        <br />
+        <code class="language-js">
+          Решением этой задачи будет функция, которая принимает на вход массив
+          направлений и возвращает true, если этот массив приведет нас к точке
+          старта и займет 10 минут, и false в противном случае. Алгоритм решения
+          такой: 1. Создать две переменные для подсчета количества шагов в
+          каждом направлении - vertical и horizontal. 2. Пройтись по массиву
+          направлений, и для каждой буквы увеличивать соответствующую переменную
+          на 1 либо уменьшать ее на 1, в зависимости от направления. 3.
+          Проверить, что общее количество шагов в каждом направлении равно 0
+          (иначе мы не вернулись в точку старта). 4. Проверить, что общее
+          количество шагов во всех направлениях равно 10 (иначе мы не затратили
+          ровно 10 минут). 5. Если оба условия выполнены, вернуть true, иначе
+          вернуть false. Здесь мы пройдемся по массиву walk, используя оператор
+          switch для определения, в какую переменную нам нужно добавить 1 или
+          вычесть 1 в зависимости от направления. Затем мы проверим, что обе
+          переменные равны 0 и длина массива равна 10, и вернем true, если это
+          так.
+        </code>
+        <pre class="margin_pre">
                      <code class="language-js">
-          
+                      
+   function isValidWalk(walk) {
+     let vertical = 0;
+     let horizontal = 0;
+     for (let direction of walk) {
+       switch (direction) {
+         case 'n': vertical++; break;
+         case 's': vertical--; break;
+         case 'e': horizontal++; break;
+         case 'w': horizontal--; break;
+        }
+      }
+      return vertical === 0 && horizontal === 0 && walk.length === 10;
+    }
+    
+  //=================================================================// 
+  
+  мое решение логика другая , но все работает. 
+  Хотя codewars тесты не проходит ...
+    function isValidWalk(walk) {
+      let resultw = walk;
+      let resultn = walk;
+      let results = walk;
+      let resulte = walk;
+      for (let i = 0; i < walk.length; i++) {
+        resultw = resultw.filter((resultw) => resultw == "w");
+      }
+      for (let i = 0; i < walk.length; i++) {
+        resultn = resultn.filter((resultn) => resultn == "n");
+      }
+      for (let i = 0; i < walk.length; i++) {
+        results = results.filter((results) => results == "s");
+      }
+      for (let i = 0; i < walk.length; i++) {
+        resulte = resulte.filter((resulte) => resulte == "e");
+      }
+      const w = +resultw.length;
+      const e = +resulte.length;
+      const n = +resultn.length;
+      const s = +results.length;
+      return (walk.length = 10 && n === s && w === e);
+    }
+    
+    console.log(isValidWalk(["w", "w", "w", "w", "w", "e", "e", "e", "e", "e"]));
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div> -->
+        <code class="language-js"> </code>
+      </div>
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
+      <div class="discription">
+        <br />
+        Your goal in this kata is to implement a difference function, which
+        subtracts one list from another and returns the result. <br />
+        It should remove all values from list a, which are present in list b
+        keeping their order. <br />
+        arrayDiff([1,2],[1]) == [2] <br />
+        If a value is present in b, all of its occurrences must be removed from
+        the other: <br />
+        arrayDiff([1,2,2,2,3],[2]) == [1,3]
+        <pre class="margin_pre">
                      <code class="language-js">
-          
+    function arrayDiff(a, b) {
+      let result = a;
+     for (let i=0;i < b.length ;i++){
+       let arg=b[i];
+       result= result.filter(result => result!= arg);
+     }
+   
+     return result;
+   }
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div> -->
+        <code class="language-js">
+          Данная функция принимает два массива a и b и возвращает новый массив,
+          состоящий из элементов массива a, которые не содержатся в массиве b.
+          Первый параметр в функции - это массив a, а второй параметр - массив
+          b, из которого нужно исключить элементы. Далее создается переменная
+          result, которая равна массиву a. Затем в цикле for перебираются
+          элементы массива b, каждый из которых используется для фильтрации
+          массива result. То есть, из массива result удаляются все элементы,
+          которые совпадают с текущим элементом из массива b. После прохождения
+          цикла возвращается измененный массив result. Таким образом, все
+          элементы массива a, которые содержатся в массиве b, будут исключены из
+          результирующего массива.
+        </code>
+      </div>
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
+      <div class="discription">
+        <br />
+        You have to write a function that accepts three parameters: cap is the
+        amount of people the bus can hold excluding the driver. on is the number
+        of people on the bus excluding the driver. wait is the number of people
+        waiting to get on to the bus excluding the driver. If there is enough
+        space, return 0, and if there isn't, return the number of passengers he
+        can't take. <br />
+        Usage Examples: <br />
+        cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers <br />
+        cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+        <pre class="margin_pre">
                      <code class="language-js">
-          
+    function enough(cap, on, wait) {
+      return (on + wait - cap)>0 ? on + wait - cap : 0
+  }      
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div> -->
+        <code class="language-js"> </code>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
         <pre class="margin_pre">
