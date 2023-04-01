@@ -90,6 +90,28 @@
                 </div> -->
       <!-- =================================================================================== -->
       <div class="discription">
+        <br>  Task
+        <br>  Write a function that returns both the minimum and maximum number of the given list/array.
+        <br>  Examples (Input --> Output)
+        <br>  [1,2,3,4,5] --> [1,5]
+        <br>  [2334454,5] --> [5,2334454]
+        <br>  [1]         --> [1,1]    
+                   <pre class="margin_pre">
+                       <code class="language-js">
+    function minMax(arr){
+      const rezult = arr.sort(function(a, b) {
+             return a - b;});
+       return newArray = [rezult[0],rezult[rezult.length-1]];
+    }
+    //======================================================//
+    function minMax(arr){
+      return [Math.min(...arr), Math.max(...arr)];
+    }
+                       </code>
+                      </pre>
+                  </div>
+        <!-- =================================================================================== -->
+      <div class="discription">
       <br>  You might know some pretty large perfect squares. But what about the NEXT one?
       <br>  Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
       <br>  If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is non-negative.
