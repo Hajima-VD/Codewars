@@ -101,6 +101,12 @@ body {
     background-color: var(--bg-bege-3);
     border: 2px solid var(--bg-bege-border-2);
 }
+.github{
+    margin-left: 15px;
+}
+.github:hover{
+
+}
 .static {
     position: fixed;
 }
