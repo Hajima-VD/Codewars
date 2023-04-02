@@ -53,50 +53,83 @@
                      </code>
                 </div> -->
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
+      <div class="discription">
+     <br>  В этом небольшом задании вам дается строка чисел, разделенных пробелами, и вы должны вернуть наибольшее и наименьшее число.
+     <br>  Примеры
+     <br>  highAndLow("1 2 3 4 5");  // return "5 1"
+     <br>  highAndLow("1 2 -3 4 5"); // return "5 -3"
+     <br>  highAndLow("1 9 3 4 -5"); // return "9 -5"
+     <br>  Примечания
+     <br>  Все номера действительны Int32, подтверждать их не нужно .
+     <br>  Во входной строке всегда будет хотя бы одно число.
+     <br>  Выходная строка должна состоять из двух чисел, разделенных одним пробелом, причем наибольшее число должно быть первым.
                  <pre class="margin_pre">
                      <code class="language-js">
-          
+  function highAndLow(numbers){
+    const arr =numbers.split(' ');
+    return  ([Math.max(...arr) , Math.min(...arr)  ]).join(' ');
+  }
+  console.log(highAndLow('23 32 44 55 66 0 -2'));     
                      </code>
                     </pre>
                     <code class="language-js">
           
                      </code>
-                </div> -->
-      <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
-                     <code class="language-js">
-          
-                     </code>
-                    </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div> -->
-      <!-- =================================================================================== -->
-      <!-- <div class="discription">
-
-                 <pre class="margin_pre">
-                     <code class="language-js">
-          
-                     </code>
-                    </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div> -->
+                </div>
       <!-- =================================================================================== -->
       <div class="discription">
-        <br>  Task
-        <br>  Write a function that returns both the minimum and maximum number of the given list/array.
-        <br>  Examples (Input --> Output)
-        <br>  [1,2,3,4,5] --> [1,5]
-        <br>  [2334454,5] --> [5,2334454]
-        <br>  [1]         --> [1,1]    
-                   <pre class="margin_pre">
+    <br>    Вы, наверное, знаете систему «лайков» из Facebook и других страниц. Люди могут «лайкать» сообщения в блогах, изображения или <br>другие элементы. Мы хотим создать текст, который должен отображаться рядом с таким элементом.
+    <br>    Реализуйте функцию, которая принимает массив, содержащий имена людей, которым понравился элемент. Он должен возвращать <br>отображаемый текст, как показано в примерах:
+    <br>    []                                -->  "no one likes this"
+    <br>    ["Peter"]                         -->  "Peter likes this"
+    <br>    ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+    <br>    ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+    <br>    ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+    <br>    Примечание. Для 4 и более имен число "and 2 others"просто увеличивается.
+                 <pre class="margin_pre">
+                     <code class="language-js">
+      function likes(names) {
+        return names.length == 0 ? "no one likes this" :
+          names.length == 1 ? `${names[0]} likes this` :
+            names.length == 2 ? `${names[0]} and ${names[1]} like this` :
+              names.length == 3 ? `${names[0]}, ${names[1]} and ${names[2]} like this` :
+                `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+      }
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        Учитывая строку цифр, вы должны заменить любую цифру ниже 5 на «0», а
+        любую цифру 5 и выше на «1». Верните полученную строку. Примечание: ввод
+        никогда не будет пустой строкой
+        <pre class="margin_pre">
+                     <code class="language-js">
+     function fakeBin(x){
+       return xarr = Array.prototype.map.call(x, (x) => x < 5 ? 0 : 1).join('');
+       }
+       //======================================================================
+       function fakeBin(x) {
+        return x.replace(/\d/g, d => d < 5 ? 0 : 1);
+      }
+                     </code>
+                    </pre>
+        <code class="language-js"> </code>
+      </div>
+      <!-- =================================================================================== -->
+      <div class="discription">
+        <br />
+        Task <br />
+        Write a function that returns both the minimum and maximum number of the
+        given list/array. <br />
+        Examples (Input --> Output) <br />
+        [1,2,3,4,5] --> [1,5] <br />
+        [2334454,5] --> [5,2334454] <br />
+        [1] --> [1,1]
+        <pre class="margin_pre">
                        <code class="language-js">
     function minMax(arr){
       const rezult = arr.sort(function(a, b) {
@@ -109,17 +142,23 @@
     }
                        </code>
                       </pre>
-                  </div>
-        <!-- =================================================================================== -->
+      </div>
+      <!-- =================================================================================== -->
       <div class="discription">
-      <br>  You might know some pretty large perfect squares. But what about the NEXT one?
-      <br>  Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
-      <br>  If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is non-negative.
-      <br>  Examples:(Input --> Output)
-      <br>  121 --> 144
-      <br>  625 --> 676
-      <br>  114 --> -1 since 114 is not a perfect square
-                 <pre class="margin_pre">
+        <br />
+        You might know some pretty large perfect squares. But what about the
+        NEXT one? <br />
+        Complete the findNextSquare method that finds the next integral perfect
+        square after the one passed as a parameter. Recall that an integral
+        perfect square is an integer n such that sqrt(n) is also an integer.
+        <br />
+        If the parameter is itself not a perfect square then -1 should be
+        returned. You may assume the parameter is non-negative. <br />
+        Examples:(Input --> Output) <br />
+        121 --> 144 <br />
+        625 --> 676 <br />
+        114 --> -1 since 114 is not a perfect square
+        <pre class="margin_pre">
                      <code class="language-js">
   function findNextSquare(sq) {
     const sqrt = sq ** 0.5;
@@ -127,18 +166,18 @@
  }
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div>
+        <code class="language-js"> </code>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
-      <br>  Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
-      <br>  Examples (Input -> Output):
-      <br>  * "String"      -> "SSttrriinngg"
-      <br>  * "Hello World" -> "HHeelllloo  WWoorrlldd"
-      <br>  * "1234!_ "     -> "11223344!!__  "
-                 <pre class="margin_pre">
+        <br />
+        Given a string, you have to return a string in which each character
+        (case-sensitive) is repeated once. <br />
+        Examples (Input -> Output): <br />
+        * "String" -> "SSttrriinngg" <br />
+        * "Hello World" -> "HHeelllloo WWoorrlldd" <br />
+        * "1234!_ " -> "11223344!!__ "
+        <pre class="margin_pre">
                      <code class="language-js">
   function doubleChar(str) {
     let arr= str.split('');
@@ -146,10 +185,8 @@
       } 
                      </code>
                     </pre>
-                    <code class="language-js">
-          
-                     </code>
-                </div>
+        <code class="language-js"> </code>
+      </div>
       <!-- =================================================================================== -->
       <div class="discription">
         You live in the city of Cartesia where all roads are laid out in a
@@ -168,27 +205,16 @@
         an empty array (that's not a walk, that's standing still!).
         <br />
         <br />
-        <code class="language-js">
-          Решением этой задачи будет функция, которая принимает на вход массив
-          направлений и возвращает true, если этот массив приведет нас к точке
-          старта и займет 10 минут, и false в противном случае. Алгоритм решения
-          такой: 1. Создать две переменные для подсчета количества шагов в
-          каждом направлении - vertical и horizontal. 2. Пройтись по массиву
-          направлений, и для каждой буквы увеличивать соответствующую переменную
-          на 1 либо уменьшать ее на 1, в зависимости от направления. 3.
-          Проверить, что общее количество шагов в каждом направлении равно 0
-          (иначе мы не вернулись в точку старта). 4. Проверить, что общее
-          количество шагов во всех направлениях равно 10 (иначе мы не затратили
-          ровно 10 минут). 5. Если оба условия выполнены, вернуть true, иначе
-          вернуть false. Здесь мы пройдемся по массиву walk, используя оператор
-          switch для определения, в какую переменную нам нужно добавить 1 или
-          вычесть 1 в зависимости от направления. Затем мы проверим, что обе
-          переменные равны 0 и длина массива равна 10, и вернем true, если это
-          так.
-        </code>
+        <code class="language-js"> </code>
         <pre class="margin_pre">
-                     <code class="language-js">
-                      
+          <code class="language-js">
+   Решением этой задачи будет функция, которая принимает на вход массивнаправлений и возвращает true,  массив приведет нас к точке старта и займет 10 минут, и false в противном случае. Алгоритм решения такой:
+   1. Создать две переменные для подсчета количества шагов в каждом направлении - vertical и horizontal. 
+   2. Пройтись по массиву направлений, и для каждой буквы увеличивать соответствующую переменную уменьшать ее на 1, в зависимости от направления. 
+   3.
+   Проверить, что общее количество шагов в каждом направлении равно 0 (иначе мы не вернулись в точку старта). 
+   4. Проверить, что общее   количество шагов во всех направлениях равно 10 (иначе мы не затратили минут). 
+   5. Если оба условия выполнены, вернуть true, иначе вернуть false. Здесь мы пройдемся по массиву walk,  оператор  switch для определения, в какую переменную нам нужно добавить 1 или вычесть 1 в завис направления. Затем мы проверим, что обе переменные равны 0 и длина массива равна 10, и вернем true, ес так.
    function isValidWalk(walk) {
      let vertical = 0;
      let horizontal = 0;

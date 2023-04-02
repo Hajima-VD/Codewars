@@ -51,18 +51,62 @@
                     </pre>
                 </div> -->
       <!-- =================================================================================== -->
-      <!-- <div class="discription">
+      <div class="discription">
                <p class="metod_discr">
           <code class="language-js">
-            
+            Оператор расширения (`...`)
           </code>
         </p>
                  <pre class="margin_pre">
                      <code class="language-js">
-              
+    Оператор расширения (`...`) в JavaScript используется для передачи элементов массива или объекта в качестве аргументов функции или для создания нового массива или объекта на основе существующих.
+
+    Пример использования оператора расширения (`...`) для передачи элементов массива в функцию:
+                   
+      const arr = [1, 2, 3];
+      console.log(...arr); // Вывод: 1 2 3
+                 
+    В этом примере оператор расширения (`...`) используется для передачи элементов массива `arr` в функцию `console.log()`. Функция выводит каждый элемент массива в консоль.
+                      
+    Пример использования оператора расширения (`...`) для создания нового массива на основе существующих:
+                 
+      const arr1 = [1, 2, 3];
+      const arr2 = [4, 5, 6];
+      const arr3 = [...arr1, ...arr2];
+      console.log(arr3); // Вывод: [1, 2, 3, 4, 5, 6]
+                      
+    В этом примере оператор расширения (`...`) используется для создания нового массива `arr3` на основе существующих массивов `arr1` и `arr2`. Массив `arr3` содержит все элементы из массивов `arr1` и `arr2`.
+    
+    Вот еще несколько примеров использования оператора расширения (`...`) в JavaScript:
+
+    1. Копирование массива:
+
+    const arr1 = [1, 2, 3];
+    const arr2 = [...arr1];
+    console.log(arr2); // Вывод: [1, 2, 3]
+    
+    2. Объединение массивов:
+    const arr1 = [1, 2, 3];
+    const arr2 = [4, 5, 6];
+    const arr3 = [...arr1, ...arr2];
+    console.log(arr3); // Вывод: [1, 2, 3, 4, 5, 6]
+    
+    3. Передача аргументов функции:
+    function sum(a, b, c) {
+      return a + b + c;
+    }
+    const arr = [1, 2, 3];
+    console.log(sum(...arr)); // Вывод: 6
+
+    4. Создание нового объекта на основе существующего:
+    const obj1 = { a: 1, b: 2 };
+    const obj2 = { c: 3, d: 4 };
+    const obj3 = { ...obj1, ...obj2 };
+    console.log(obj3); // Вывод: { a: 1, b: 2, c: 3, d: 4 }
+               
                      </code>
                     </pre>
-                </div> -->
+                </div>
       <!-- =================================================================================== -->
       <div class="discription">
         <p class="metod_discr">
@@ -319,13 +363,98 @@ str.repeat(count)
         <p class="metod_discr">
           <code class="language-js"> Array.prototype.map() </code>
         </p>
+        Метод `map()` в JavaScript создаёт новый массив с результатом вызова
+        указанной функции для каждого элемента массива¹. Синтаксис метода:
+        <br />
+        <pre class="margin_pre">
+        <code class="language-js ">
+   const new_array = arr.map(function callback(currentValue[, index[, array]]) {
+     // Возвращает элемент для new_array
+   }[, thisArg])
+          </code>
+        </pre>
+        - `callback` - функция, которая будет вызвана для каждого элемента
+        массива. <br />
+        - `currentValue` - текущий обрабатываемый элемент массива. <br />
+        - `index` (необязательный) - индекс текущего обрабатываемого элемента в
+        массиве. <br />
+        - `array` (необязательный) - массив, который вызывает метод map().
+        <br />
+        - `thisArg` (необязательный) - объект, который будет использоваться как
+        `this` при вызове функции callback.
         <pre class="margin_pre">
                      <code class="language-js">
- Метод map() создаёт новый массив с результатом вызова указанной функции для 
- каждого элемента массива.
- const new_array = arr.map(function callback( currentValue[, index[, array]]) {
-  // Возвращает элемент для new_array
- }[, thisArg])
+     Пример использования метода map() на объекте строки String 
+     для получения массива байт в кодировке ASCII, представляющего значения символов:
+     const map = Array.prototype.map;
+     const charCodes = map.call('Hello World', (x) => x.charCodeAt(0));
+     // теперь charCodes равен [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+     1. Пример использования метода `map()` для переворачивания строки:
+     const string = '12345';
+     const reversed = Array.prototype.map.call(string, (x) => x).reverse().join('');
+     // reversed равен '54321'
+     2. Пример использования метода `map()`
+      для итерации элементов массива:
+     const sweetArray = [2, 3, 4, 5, 35];
+     const sweeterArray = sweetArray.map(sweetItem => {
+       return sweetItem * 2;
+     });
+     console.log(sweeterArray);
+     // Вывод: [4, 6, 8, 10, 70]
+     3. Пример использования метода `map()` для создания 
+     нового массива из объектов:
+     const arr = [
+       { name: 'apple', count: 2 },
+       { name: 'orange', count: 5 },
+       { name: 'pear', count: 3 },
+     ];
+     const newArr = arr.map(item => {
+       return item.name;
+     });
+     console.log(newArr);
+     // Вывод: ['apple', 'orange', 'pear']
+     4. Пример использования метода `map()` для создания 
+     нового массива из объектов с изменением свойств:
+     const arr = [
+       { name: 'apple', count: 2 },
+       { name: 'orange', count: 5 },
+       { name: 'pear', count: 3 },
+     ];
+     const newArr = arr.map(item => {
+       return {
+         label: item.name,
+         value: item.count * 2,
+       };
+     });
+     console.log(newArr);
+     // Вывод:
+     // [
+     //   { label: 'apple', value: 4 },
+     //   { label: 'orange', value: 10 },
+     //   { label: 'pear', value: 6 }
+     // ]
+     5. Пример использования метода `map()` для создания нового
+      массива из объектов с изменением свойств и фильтрацией:
+     const arr = [
+       { name: 'apple', count: 2 },
+       { name: 'orange', count: 5 },
+       { name: 'pear', count: 3 },
+     ];
+     const newArr = arr.map(item => {
+       if (item.count > 2) {
+         return {
+           label: item.name,
+           value: item.count * 2,
+         };
+       }
+     });
+     console.log(newArr);
+     // Вывод:
+     // [
+     //   undefined,
+     //   { label: 'orange', value: 10 },
+     //   undefined
+     // ]
                      </code>
                     </pre>
       </div>
