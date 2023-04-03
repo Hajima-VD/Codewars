@@ -51,6 +51,135 @@
                     </pre>
                 </div> -->
       <!-- =================================================================================== -->
+      <!-- <div class="discription">
+               <p class="metod_discr">
+          <code class="language-js">
+            
+          </code>
+        </p>
+                 <pre class="margin_pre">
+                     <code class="language-js">
+              
+                     </code>
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+               <p class="metod_discr">
+          <code class="language-js">
+            
+          </code>
+        </p>
+                 <pre class="margin_pre">
+                     <code class="language-js">
+              
+                     </code>
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+               <p class="metod_discr">
+          <code class="language-js">
+            
+          </code>
+        </p>
+                 <pre class="margin_pre">
+                     <code class="language-js">
+              
+                     </code>
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+               <p class="metod_discr">
+          <code class="language-js">
+            
+          </code>
+        </p>
+                 <pre class="margin_pre">
+                     <code class="language-js">
+              
+                     </code>
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+               <p class="metod_discr">
+          <code class="language-js">
+            
+          </code>
+        </p>
+                 <pre class="margin_pre">
+                     <code class="language-js">
+              
+                     </code>
+                    </pre>
+                </div> -->
+      <!-- =================================================================================== -->
+      <div class="discription">
+               <p class="metod_discr">
+          <code class="language-js">
+            while
+          </code>
+        </p>
+                 <pre class="margin_pre">
+                     <code class="language-js">
+   Оператор while в JavaScript позволяет воспроизводить цикл, который выполняет задачу столько раз, пока истинно заданное условие¹. Цикл while имеет следующий синтаксис:
+           
+    while (условие) {
+      // код
+    }
+                 
+   Код из тела цикла выполняется, пока условие истинно⁴. Предикат - это условие, которое указывается в скобках после while. Это условие вычисляется и проверяется перед выполнением тела цикла на каждой итерации³.
+                      
+   Вот пример использования цикла while в JavaScript:
+                
+    let i = 0;
+    while (i < 3) { // выводит i, пока i < 3
+      alert( i );
+      i++;
+    }
+                   
+   В результате выполнения этого кода будут выведены числа от 0 до 2⁴.
+
+   Конечно! Вот еще несколько примеров использования цикла while в JavaScript:
+
+  let i = 0;
+  while (i < 10) {
+    console.log(i);
+    i++;
+  }
+  
+  В результате выполнения этого кода будут выведены числа от 0 до 9.
+  
+  
+  let i = 0;
+  while (i < 10) {
+    if (i === 5) {
+      break;
+    }
+    console.log(i);
+    i++;
+  }
+  
+  В результате выполнения этого кода будут выведены числа от 0 до 4.
+  
+  
+  let i = 0;
+  while (i < 10) {
+    if (i === 5) {
+      i++;
+      continue;
+    }
+    console.log(i);
+    i++;
+  }
+  
+  В результате выполнения этого кода будут выведены числа от 0 до 9, кроме числа 5.
+                     </code>
+                    </pre>
+                </div>
+      <!-- =================================================================================== -->
       <div class="discription">
                <p class="metod_discr">
           <code class="language-js">
@@ -477,14 +606,33 @@ str.split([separator[, limit]])
         </p>
         <pre class="margin_pre">
                      <code class="language-js ">
-Метод filter() создаёт новый массив со всеми элементами, прошедшими 
-проверку, задаваемую в передаваемой функции.
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+    Метод filter() - это итеративный метод, который создает новый массив, заполненный элементами, которые проходят тест, предоставленный функцией. Он не выполняет функцию для пустых элементов и не изменяет исходный массив¹²³.
 
-const result = words.filter(word => word.length > 6);
+    Вот пример использования:
+                   
+    const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+    const result = words.filter(word => word.length > 6);
+    console.log(result);
+    // ожидаемый вывод: Array ["exuberant", "destruction", "present"]
+                   
+    В этом примере мы создаем массив слов и затем используем `filter()`, чтобы создать новый массив со всеми словами, которые имеют более шести букв¹.
 
-console.log(result);
-// Expected output: Array ["exuberant", "destruction", "present"]
+    Вот еще несколько примеров:
+
+    const numbers = [1, 2, 3, 4, 5];
+    const evenNumbers = numbers.filter(number => number % 2 === 0);
+    console.log(evenNumbers);
+    // ожидаемый вывод: Array [2, 4]
+    
+    const fruits = ['apple', 'banana', 'grape', 'orange'];
+    const longFruits = fruits.filter(fruit => fruit.length > 5);
+    console.log(longFruits);
+    // ожидаемый вывод: Array ["banana", "orange"]
+
+    В первом примере мы создаем массив чисел и затем используем filter(), чтобы создать новый массив только с четными числами.
+
+    Во втором примере мы создаем массив фруктов и затем используем filter(), чтобы создать новый массив только с фруктами, длина которых больше пяти букв.
+
                      </code>
                     </pre>
       </div>

@@ -60,6 +60,108 @@
                      </code>
                 </div> -->
       <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <!-- <div class="discription">
+
+                 <pre class="margin_pre">
+                     <code class="language-js">
+          
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div> -->
+      <!-- =================================================================================== -->
+      <div class="discription">
+  <br>   Напишите функцию , persistenceкоторая принимает положительный параметр numи возвращает его мультипликативную постоянство, то есть количество раз, которое вы должны умножить на цифры, numпока не получите одну цифру.
+  <br>   Например (Ввод --> Вывод) :
+  <br>   39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
+  <br>   999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
+  <br>   4 --> 0 (because 4 is already a one-digit number)
+                 <pre class="margin_pre">
+                     <code class="language-js">
+   Ваша задача заключается в написании функции persistence, которая принимает положительный параметр num и возвращает его мультипликативную устойчивость (multiplicative persistence), которая представляет собой количество раз, которое вы должны умножить цифры в num, пока не останется одна цифра.
+   
+    function persistence(num) {
+        let count = 0;
+        while (num.toString().length > 1) {
+            num = num.toString().split('').reduce((acc, cur) => acc * cur);
+            count++;
+        }
+        return count;
+    }
+    console.log(persistence(39)); // 3
+    console.log(persistence(999)); // 4
+    console.log(persistence(4)); // 0
+                     
+   Функция начинается с нулевого значения счетчика и продолжает умножать цифры в числе до тех пор, пока длина числа не станет равной единице. В каждой итерации мы преобразуем число в строку и затем в массив символов с помощью метода split(). Затем мы используем метод reduce() для перемножения всех элементов массива. Наконец, мы увеличиваем значение счетчика на единицу и повторяем процесс до тех пор, пока длина числа не станет равной единице. В конце мы возвращаем значение счетчика.      
+                     </code>
+                    </pre>
+                    <code class="language-js">
+          
+                     </code>
+                </div>
+      <!-- =================================================================================== -->
       <div class="discription">
      <br>  В этом небольшом задании вам дается строка чисел, разделенных пробелами, и вы должны вернуть наибольшее и наименьшее число.
      <br>  Примеры
